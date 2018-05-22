@@ -1,0 +1,1837 @@
+
+
+TOTAL: (12/20)
+
+Correctness: (6/10)
+10 - failed test cases / 30 (max of 10 off)
+
+Style: (6/10)
+
+-1 Map not used to split words into families based on guess (in make guess)
+
+-1 makeGuess method too long (over 25 lines of code) Should be broken up into  smaller methods
+
+-1 no check on preconditions with if / throwing exceptions
+
+-1 complex algorithms or code not commented
+
+-1 map that holds the patterns and array lists of words should be local to makeGuess
+(If Map<String, ArrayList<String>> is an instance variable, -1)
+
+-1 too many instance variables (10+ or so)
+
+-1 other problems such as poor identifiers, poor tabbing and indenting, etc.
+
+Comments and Suggestions:
+
+
+-1 Preconditions not checked.
+-1 map that holds patterns and array lists is an instance variable
+-1 Too many instance variables
+-1 Helper methods not private.
+
+Although, your makeGuess wasn't too long you should definitely consider breaking up
+different logic blocks into different methods.
+
+Don't use magic numbers.
+
+====================BUILD ERRORS=====================
+BevoTest_Hangman.java:221: warning: [unchecked] unchecked cast
+            final Map<String, Integer> expectedMap = buildMapNoSpaces((Map<String, Integer>) reader.readObject());
+                                                                                                              ^
+  required: Map<String,Integer>
+  found:    Object
+1 warning
+
+
+=================TEST OUTPUT FOLLOWS=================
+TEST SUMMARY
+
+Test name: CS 314 EvilHangman assignment scoring test
+
+Results: Passed: 1506, Failed: 96, No result: 0
+
+Classes tested:
+* class HangmanManager, loaded from file:/v/filer4b/v38q001/gilbert/Documents/Github/CS314_grade/a4/submissions/xiapengdi_4106981_41752326_a4/
+
+Environment:       Java version 1.8.0_121, maximum heap size 3550 MB, running on Linux 4.4.0-64-generic (amd64)
+Java class path:   ../../../data/bevotest.jar:./
+Working directory: /v/filer4b/v38q001/gilbert/Documents/Github/CS314_grade/a4/submissions/xiapengdi_4106981_41752326_a4
+Test start time:   2017-03-05 13:37:16 CST
+Test end time:     2017-03-05 13:37:32 CST
+Test elapsed time: 16.821 s
+
+
+TEST LOG
+   1 | Passed    | Run time: 6 ms           | Construct HangmanManager - Round 1
+   2 | Passed    | Run time: 6 ms           | Round 1: Prep for round & Initial number of words
+   3 | Passed    | Run time: 0 ms           | Round 1: Initial pattern
+   4 | Passed    | Run time: 5 ms           | Round 1, Guess 0: makeGuess result Map
+   5 | Passed    | Run time: 0 ms           | Round 1, Guess 0: Word count
+   6 | Passed    | Run time: 0 ms           | Round 1, Guess 0: Current pattern
+   7 | Passed    | Run time: 2 ms           | Round 1, Guess 1: makeGuess result Map
+   8 | Passed    | Run time: 0 ms           | Round 1, Guess 1: Word count
+   9 | Passed    | Run time: 0 ms           | Round 1, Guess 1: Current pattern
+  10 | Passed    | Run time: 2 ms           | Round 1, Guess 2: makeGuess result Map
+  11 | Passed    | Run time: 0 ms           | Round 1, Guess 2: Word count
+  12 | Passed    | Run time: 0 ms           | Round 1, Guess 2: Current pattern
+  13 | Passed    | Run time: 1 ms           | Round 1, Guess 3: makeGuess result Map
+  14 | Passed    | Run time: 0 ms           | Round 1, Guess 3: Word count
+  15 | Passed    | Run time: 0 ms           | Round 1, Guess 3: Current pattern
+  16 | Passed    | Run time: 0 ms           | Round 1, Guess 4: makeGuess result Map
+  17 | Passed    | Run time: 0 ms           | Round 1, Guess 4: Word count
+  18 | Passed    | Run time: 0 ms           | Round 1, Guess 4: Current pattern
+  19 | Passed    | Run time: 0 ms           | Round 1, Guess 5: makeGuess result Map
+  20 | Passed    | Run time: 0 ms           | Round 1, Guess 5: Word count
+  21 | Passed    | Run time: 0 ms           | Round 1, Guess 5: Current pattern
+  22 | Passed    | Run time: 1 ms           | Round 1, Guess 6: makeGuess result Map
+  23 | Passed    | Run time: 0 ms           | Round 1, Guess 6: Word count
+  24 | Passed    | Run time: 0 ms           | Round 1, Guess 6: Current pattern
+  25 | Passed    | Run time: 0 ms           | Round 1, Guess 7: makeGuess result Map
+  26 | Passed    | Run time: 0 ms           | Round 1, Guess 7: Word count
+  27 | Passed    | Run time: 0 ms           | Round 1, Guess 7: Current pattern
+  28 | Passed    | Run time: 1 ms           | Round 1, Guess 8: makeGuess result Map
+  29 | Passed    | Run time: 0 ms           | Round 1, Guess 8: Word count
+  30 | Passed    | Run time: 0 ms           | Round 1, Guess 8: Current pattern
+  31 | Passed    | Run time: 0 ms           | Round 1, Guess 9: makeGuess result Map
+  32 | Passed    | Run time: 0 ms           | Round 1, Guess 9: Word count
+  33 | Passed    | Run time: 0 ms           | Round 1, Guess 9: Current pattern
+  34 | Passed    | Run time: 1 ms           | Round 1, Guess 10: makeGuess result Map
+  35 | Passed    | Run time: 0 ms           | Round 1, Guess 10: Word count
+  36 | Passed    | Run time: 0 ms           | Round 1, Guess 10: Current pattern
+  37 | Passed    | Run time: 0 ms           | Round 1, Guess 11: makeGuess result Map
+  38 | Passed    | Run time: 0 ms           | Round 1, Guess 11: Word count
+  39 | Passed    | Run time: 0 ms           | Round 1, Guess 11: Current pattern
+  40 | Passed    | Run time: 9 ms           | Construct HangmanManager - Round 2
+  41 | Passed    | Run time: 7 ms           | Round 2: Prep for round & Initial number of words
+  42 | Passed    | Run time: 0 ms           | Round 2: Initial pattern
+  43 | Passed    | Run time: 16 ms          | Round 2, Guess 0: makeGuess result Map
+  44 | Passed    | Run time: 0 ms           | Round 2, Guess 0: Word count
+  45 | Passed    | Run time: 0 ms           | Round 2, Guess 0: Current pattern
+  46 | Passed    | Run time: 2 ms           | Round 2, Guess 1: makeGuess result Map
+  47 | Passed    | Run time: 0 ms           | Round 2, Guess 1: Word count
+  48 | Passed    | Run time: 0 ms           | Round 2, Guess 1: Current pattern
+  49 | Passed    | Run time: 2 ms           | Round 2, Guess 2: makeGuess result Map
+  50 | Passed    | Run time: 0 ms           | Round 2, Guess 2: Word count
+  51 | Passed    | Run time: 0 ms           | Round 2, Guess 2: Current pattern
+  52 | Passed    | Run time: 4 ms           | Round 2, Guess 3: makeGuess result Map
+  53 | Passed    | Run time: 0 ms           | Round 2, Guess 3: Word count
+  54 | Passed    | Run time: 0 ms           | Round 2, Guess 3: Current pattern
+  55 | Passed    | Run time: 1 ms           | Round 2, Guess 4: makeGuess result Map
+  56 | Passed    | Run time: 0 ms           | Round 2, Guess 4: Word count
+  57 | Passed    | Run time: 0 ms           | Round 2, Guess 4: Current pattern
+  58 | Passed    | Run time: 1 ms           | Round 2, Guess 5: makeGuess result Map
+  59 | Passed    | Run time: 0 ms           | Round 2, Guess 5: Word count
+  60 | Passed    | Run time: 0 ms           | Round 2, Guess 5: Current pattern
+  61 | Passed    | Run time: 1 ms           | Round 2, Guess 6: makeGuess result Map
+  62 | Passed    | Run time: 0 ms           | Round 2, Guess 6: Word count
+  63 | Passed    | Run time: 0 ms           | Round 2, Guess 6: Current pattern
+  64 | Passed    | Run time: 2 ms           | Round 2, Guess 7: makeGuess result Map
+  65 | Passed    | Run time: 0 ms           | Round 2, Guess 7: Word count
+  66 | Passed    | Run time: 0 ms           | Round 2, Guess 7: Current pattern
+  67 | Passed    | Run time: 2 ms           | Round 2, Guess 8: makeGuess result Map
+  68 | Passed    | Run time: 0 ms           | Round 2, Guess 8: Word count
+  69 | Passed    | Run time: 0 ms           | Round 2, Guess 8: Current pattern
+  70 | Passed    | Run time: 1 ms           | Round 2, Guess 9: makeGuess result Map
+  71 | Passed    | Run time: 0 ms           | Round 2, Guess 9: Word count
+  72 | Passed    | Run time: 0 ms           | Round 2, Guess 9: Current pattern
+  73 | Passed    | Run time: 3 ms           | Construct HangmanManager - Round 3
+  74 | Passed    | Run time: 2 ms           | Round 3: Prep for round & Initial number of words
+  75 | Passed    | Run time: 0 ms           | Round 3: Initial pattern
+  76 | Passed    | Run time: 0 ms           | Round 3, Guess 0: makeGuess result Map
+  77 | Passed    | Run time: 0 ms           | Round 3, Guess 0: Word count
+  78 | Passed    | Run time: 0 ms           | Round 3, Guess 0: Current pattern
+  79 | Passed    | Run time: 0 ms           | Round 3, Guess 1: makeGuess result Map
+  80 | Passed    | Run time: 0 ms           | Round 3, Guess 1: Word count
+  81 | Passed    | Run time: 0 ms           | Round 3, Guess 1: Current pattern
+  82 | Passed    | Run time: 0 ms           | Round 3, Guess 2: makeGuess result Map
+  83 | Passed    | Run time: 0 ms           | Round 3, Guess 2: Word count
+  84 | Passed    | Run time: 0 ms           | Round 3, Guess 2: Current pattern
+  85 | Passed    | Run time: 0 ms           | Round 3, Guess 3: makeGuess result Map
+  86 | Passed    | Run time: 0 ms           | Round 3, Guess 3: Word count
+  87 | Passed    | Run time: 0 ms           | Round 3, Guess 3: Current pattern
+  88 | Passed    | Run time: 0 ms           | Round 3, Guess 4: makeGuess result Map
+  89 | Passed    | Run time: 0 ms           | Round 3, Guess 4: Word count
+  90 | Passed    | Run time: 0 ms           | Round 3, Guess 4: Current pattern
+  91 | Passed    | Run time: 0 ms           | Round 3, Guess 5: makeGuess result Map
+  92 | Passed    | Run time: 0 ms           | Round 3, Guess 5: Word count
+  93 | Passed    | Run time: 0 ms           | Round 3, Guess 5: Current pattern
+  94 | Passed    | Run time: 0 ms           | Round 3, Guess 6: makeGuess result Map
+  95 | Passed    | Run time: 0 ms           | Round 3, Guess 6: Word count
+  96 | Passed    | Run time: 0 ms           | Round 3, Guess 6: Current pattern
+  97 | Passed    | Run time: 0 ms           | Round 3, Guess 7: makeGuess result Map
+  98 | Passed    | Run time: 0 ms           | Round 3, Guess 7: Word count
+  99 | Passed    | Run time: 0 ms           | Round 3, Guess 7: Current pattern
+ 100 | Passed    | Run time: 0 ms           | Round 3, Guess 8: makeGuess result Map
+ 101 | Passed    | Run time: 0 ms           | Round 3, Guess 8: Word count
+ 102 | Passed    | Run time: 0 ms           | Round 3, Guess 8: Current pattern
+ 103 | Passed    | Run time: 0 ms           | Round 3, Guess 9: makeGuess result Map
+ 104 | Passed    | Run time: 0 ms           | Round 3, Guess 9: Word count
+ 105 | Passed    | Run time: 0 ms           | Round 3, Guess 9: Current pattern
+ 106 | Passed    | Run time: 0 ms           | Round 3, Guess 10: makeGuess result Map
+ 107 | Passed    | Run time: 0 ms           | Round 3, Guess 10: Word count
+ 108 | Passed    | Run time: 1 ms           | Round 3, Guess 10: Current pattern
+ 109 | Passed    | Run time: 0 ms           | Round 3, Guess 11: makeGuess result Map
+ 110 | Passed    | Run time: 0 ms           | Round 3, Guess 11: Word count
+ 111 | Passed    | Run time: 0 ms           | Round 3, Guess 11: Current pattern
+ 112 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 4
+ 113 | Passed    | Run time: 2 ms           | Round 4: Prep for round & Initial number of words
+ 114 | Passed    | Run time: 0 ms           | Round 4: Initial pattern
+ 115 | Passed    | Run time: 2 ms           | Round 4, Guess 0: makeGuess result Map
+ 116 | Passed    | Run time: 0 ms           | Round 4, Guess 0: Word count
+ 117 | Passed    | Run time: 0 ms           | Round 4, Guess 0: Current pattern
+ 118 | Passed    | Run time: 1 ms           | Round 4, Guess 1: makeGuess result Map
+ 119 | Passed    | Run time: 0 ms           | Round 4, Guess 1: Word count
+ 120 | Passed    | Run time: 0 ms           | Round 4, Guess 1: Current pattern
+ 121 | Passed    | Run time: 0 ms           | Round 4, Guess 2: makeGuess result Map
+ 122 | Passed    | Run time: 0 ms           | Round 4, Guess 2: Word count
+ 123 | Passed    | Run time: 0 ms           | Round 4, Guess 2: Current pattern
+ 124 | Passed    | Run time: 0 ms           | Round 4, Guess 3: makeGuess result Map
+ 125 | Passed    | Run time: 0 ms           | Round 4, Guess 3: Word count
+ 126 | Passed    | Run time: 0 ms           | Round 4, Guess 3: Current pattern
+ 127 | Passed    | Run time: 0 ms           | Round 4, Guess 4: makeGuess result Map
+ 128 | Passed    | Run time: 0 ms           | Round 4, Guess 4: Word count
+ 129 | Passed    | Run time: 0 ms           | Round 4, Guess 4: Current pattern
+ 130 | Passed    | Run time: 1 ms           | Round 4, Guess 5: makeGuess result Map
+ 131 | Passed    | Run time: 0 ms           | Round 4, Guess 5: Word count
+ 132 | Passed    | Run time: 0 ms           | Round 4, Guess 5: Current pattern
+ 133 | Passed    | Run time: 0 ms           | Round 4, Guess 6: makeGuess result Map
+ 134 | Passed    | Run time: 0 ms           | Round 4, Guess 6: Word count
+ 135 | Passed    | Run time: 0 ms           | Round 4, Guess 6: Current pattern
+ 136 | Passed    | Run time: 0 ms           | Round 4, Guess 7: makeGuess result Map
+ 137 | Passed    | Run time: 0 ms           | Round 4, Guess 7: Word count
+ 138 | Passed    | Run time: 0 ms           | Round 4, Guess 7: Current pattern
+ 139 | Passed    | Run time: 0 ms           | Round 4, Guess 8: makeGuess result Map
+ 140 | Passed    | Run time: 0 ms           | Round 4, Guess 8: Word count
+ 141 | Passed    | Run time: 0 ms           | Round 4, Guess 8: Current pattern
+ 142 | Passed    | Run time: 0 ms           | Round 4, Guess 9: makeGuess result Map
+ 143 | Passed    | Run time: 0 ms           | Round 4, Guess 9: Word count
+ 144 | Passed    | Run time: 0 ms           | Round 4, Guess 9: Current pattern
+ 145 | Passed    | Run time: 0 ms           | Round 4, Guess 10: makeGuess result Map
+ 146 | Passed    | Run time: 0 ms           | Round 4, Guess 10: Word count
+ 147 | Passed    | Run time: 0 ms           | Round 4, Guess 10: Current pattern
+ 148 | Passed    | Run time: 0 ms           | Round 4, Guess 11: makeGuess result Map
+ 149 | Passed    | Run time: 0 ms           | Round 4, Guess 11: Word count
+ 150 | Passed    | Run time: 0 ms           | Round 4, Guess 11: Current pattern
+ 151 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 5
+ 152 | Passed    | Run time: 1 ms           | Round 5: Prep for round & Initial number of words
+ 153 | Passed    | Run time: 0 ms           | Round 5: Initial pattern
+ 154 | Passed    | Run time: 3 ms           | Round 5, Guess 0: makeGuess result Map
+ 155 | Passed    | Run time: 0 ms           | Round 5, Guess 0: Word count
+ 156 | Passed    | Run time: 0 ms           | Round 5, Guess 0: Current pattern
+ 157 | Passed    | Run time: 1 ms           | Round 5, Guess 1: makeGuess result Map
+ 158 | Passed    | Run time: 0 ms           | Round 5, Guess 1: Word count
+ 159 | Passed    | Run time: 0 ms           | Round 5, Guess 1: Current pattern
+ 160 | Passed    | Run time: 1 ms           | Round 5, Guess 2: makeGuess result Map
+ 161 | Passed    | Run time: 0 ms           | Round 5, Guess 2: Word count
+ 162 | Passed    | Run time: 0 ms           | Round 5, Guess 2: Current pattern
+ 163 | Passed    | Run time: 0 ms           | Round 5, Guess 3: makeGuess result Map
+ 164 | Passed    | Run time: 0 ms           | Round 5, Guess 3: Word count
+ 165 | Passed    | Run time: 0 ms           | Round 5, Guess 3: Current pattern
+ 166 | Passed    | Run time: 0 ms           | Round 5, Guess 4: makeGuess result Map
+ 167 | Passed    | Run time: 0 ms           | Round 5, Guess 4: Word count
+ 168 | Passed    | Run time: 0 ms           | Round 5, Guess 4: Current pattern
+ 169 | Passed    | Run time: 0 ms           | Round 5, Guess 5: makeGuess result Map
+ 170 | Passed    | Run time: 0 ms           | Round 5, Guess 5: Word count
+ 171 | Passed    | Run time: 0 ms           | Round 5, Guess 5: Current pattern
+ 172 | Passed    | Run time: 0 ms           | Round 5, Guess 6: makeGuess result Map
+ 173 | Passed    | Run time: 0 ms           | Round 5, Guess 6: Word count
+ 174 | Passed    | Run time: 0 ms           | Round 5, Guess 6: Current pattern
+ 175 | Passed    | Run time: 0 ms           | Round 5, Guess 7: makeGuess result Map
+ 176 | Passed    | Run time: 0 ms           | Round 5, Guess 7: Word count
+ 177 | Passed    | Run time: 0 ms           | Round 5, Guess 7: Current pattern
+ 178 | Passed    | Run time: 0 ms           | Round 5, Guess 8: makeGuess result Map
+ 179 | Passed    | Run time: 0 ms           | Round 5, Guess 8: Word count
+ 180 | Passed    | Run time: 0 ms           | Round 5, Guess 8: Current pattern
+ 181 | Passed    | Run time: 1 ms           | Round 5, Guess 9: makeGuess result Map
+ 182 | Failed    | NullPointerException     | Round 5, Guess 9: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 183 | Failed    | Incorrect return value   | Round 5, Guess 9: Current pattern
+ 184 | Failed    | NullPointerException     | Round 5, Guess 10: makeGuess result Map
+      java.lang.NullPointerException
+	at HangmanManager.makeGuess(HangmanManager.java:299)
+	at BevoTest_Hangman$4.executeTest(BevoTest_Hangman.java:229)
+	... 2 more
+ 185 | Failed    | NullPointerException     | Round 5, Guess 10: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 186 | Failed    | Incorrect return value   | Round 5, Guess 10: Current pattern
+ 187 | Failed    | NullPointerException     | Round 5, Guess 11: makeGuess result Map
+      java.lang.NullPointerException
+	at HangmanManager.makeGuess(HangmanManager.java:299)
+	at BevoTest_Hangman$4.executeTest(BevoTest_Hangman.java:229)
+	... 2 more
+ 188 | Failed    | NullPointerException     | Round 5, Guess 11: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 189 | Failed    | Incorrect return value   | Round 5, Guess 11: Current pattern
+ 190 | Passed    | Run time: 1 ms           | Construct HangmanManager - Round 6
+ 191 | Passed    | Run time: 1 ms           | Round 6: Prep for round & Initial number of words
+ 192 | Passed    | Run time: 0 ms           | Round 6: Initial pattern
+ 193 | Passed    | Run time: 10 ms          | Round 6, Guess 0: makeGuess result Map
+ 194 | Passed    | Run time: 0 ms           | Round 6, Guess 0: Word count
+ 195 | Passed    | Run time: 0 ms           | Round 6, Guess 0: Current pattern
+ 196 | Passed    | Run time: 5 ms           | Round 6, Guess 1: makeGuess result Map
+ 197 | Passed    | Run time: 0 ms           | Round 6, Guess 1: Word count
+ 198 | Passed    | Run time: 0 ms           | Round 6, Guess 1: Current pattern
+ 199 | Passed    | Run time: 0 ms           | Round 6, Guess 2: makeGuess result Map
+ 200 | Passed    | Run time: 0 ms           | Round 6, Guess 2: Word count
+ 201 | Passed    | Run time: 0 ms           | Round 6, Guess 2: Current pattern
+ 202 | Passed    | Run time: 1 ms           | Round 6, Guess 3: makeGuess result Map
+ 203 | Passed    | Run time: 0 ms           | Round 6, Guess 3: Word count
+ 204 | Passed    | Run time: 0 ms           | Round 6, Guess 3: Current pattern
+ 205 | Passed    | Run time: 0 ms           | Round 6, Guess 4: makeGuess result Map
+ 206 | Passed    | Run time: 0 ms           | Round 6, Guess 4: Word count
+ 207 | Passed    | Run time: 0 ms           | Round 6, Guess 4: Current pattern
+ 208 | Passed    | Run time: 1 ms           | Round 6, Guess 5: makeGuess result Map
+ 209 | Passed    | Run time: 1 ms           | Round 6, Guess 5: Word count
+ 210 | Passed    | Run time: 0 ms           | Round 6, Guess 5: Current pattern
+ 211 | Passed    | Run time: 0 ms           | Round 6, Guess 6: makeGuess result Map
+ 212 | Passed    | Run time: 0 ms           | Round 6, Guess 6: Word count
+ 213 | Passed    | Run time: 0 ms           | Round 6, Guess 6: Current pattern
+ 214 | Passed    | Run time: 1 ms           | Round 6, Guess 7: makeGuess result Map
+ 215 | Passed    | Run time: 0 ms           | Round 6, Guess 7: Word count
+ 216 | Passed    | Run time: 0 ms           | Round 6, Guess 7: Current pattern
+ 217 | Passed    | Run time: 0 ms           | Round 6, Guess 8: makeGuess result Map
+ 218 | Passed    | Run time: 0 ms           | Round 6, Guess 8: Word count
+ 219 | Passed    | Run time: 0 ms           | Round 6, Guess 8: Current pattern
+ 220 | Passed    | Run time: 1 ms           | Round 6, Guess 9: makeGuess result Map
+ 221 | Passed    | Run time: 0 ms           | Round 6, Guess 9: Word count
+ 222 | Passed    | Run time: 0 ms           | Round 6, Guess 9: Current pattern
+ 223 | Passed    | Run time: 1 ms           | Round 6, Guess 10: makeGuess result Map
+ 224 | Passed    | Run time: 0 ms           | Round 6, Guess 10: Word count
+ 225 | Passed    | Run time: 0 ms           | Round 6, Guess 10: Current pattern
+ 226 | Passed    | Run time: 1 ms           | Round 6, Guess 11: makeGuess result Map
+ 227 | Passed    | Run time: 0 ms           | Round 6, Guess 11: Word count
+ 228 | Passed    | Run time: 0 ms           | Round 6, Guess 11: Current pattern
+ 229 | Passed    | Run time: 1 ms           | Round 6, Guess 12: makeGuess result Map
+ 230 | Passed    | Run time: 0 ms           | Round 6, Guess 12: Word count
+ 231 | Passed    | Run time: 0 ms           | Round 6, Guess 12: Current pattern
+ 232 | Passed    | Run time: 0 ms           | Round 6, Guess 13: makeGuess result Map
+ 233 | Passed    | Run time: 0 ms           | Round 6, Guess 13: Word count
+ 234 | Passed    | Run time: 0 ms           | Round 6, Guess 13: Current pattern
+ 235 | Passed    | Run time: 0 ms           | Round 6, Guess 14: makeGuess result Map
+ 236 | Passed    | Run time: 0 ms           | Round 6, Guess 14: Word count
+ 237 | Passed    | Run time: 0 ms           | Round 6, Guess 14: Current pattern
+ 238 | Passed    | Run time: 0 ms           | Round 6, Guess 15: makeGuess result Map
+ 239 | Passed    | Run time: 0 ms           | Round 6, Guess 15: Word count
+ 240 | Passed    | Run time: 0 ms           | Round 6, Guess 15: Current pattern
+ 241 | Passed    | Run time: 0 ms           | Round 6, Guess 16: makeGuess result Map
+ 242 | Passed    | Run time: 0 ms           | Round 6, Guess 16: Word count
+ 243 | Passed    | Run time: 0 ms           | Round 6, Guess 16: Current pattern
+ 244 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 7
+ 245 | Passed    | Run time: 1 ms           | Round 7: Prep for round & Initial number of words
+ 246 | Passed    | Run time: 0 ms           | Round 7: Initial pattern
+ 247 | Passed    | Run time: 5 ms           | Round 7, Guess 0: makeGuess result Map
+ 248 | Passed    | Run time: 0 ms           | Round 7, Guess 0: Word count
+ 249 | Passed    | Run time: 0 ms           | Round 7, Guess 0: Current pattern
+ 250 | Passed    | Run time: 5 ms           | Round 7, Guess 1: makeGuess result Map
+ 251 | Passed    | Run time: 0 ms           | Round 7, Guess 1: Word count
+ 252 | Passed    | Run time: 1 ms           | Round 7, Guess 1: Current pattern
+ 253 | Passed    | Run time: 3 ms           | Round 7, Guess 2: makeGuess result Map
+ 254 | Passed    | Run time: 0 ms           | Round 7, Guess 2: Word count
+ 255 | Passed    | Run time: 0 ms           | Round 7, Guess 2: Current pattern
+ 256 | Passed    | Run time: 4 ms           | Round 7, Guess 3: makeGuess result Map
+ 257 | Passed    | Run time: 0 ms           | Round 7, Guess 3: Word count
+ 258 | Passed    | Run time: 0 ms           | Round 7, Guess 3: Current pattern
+ 259 | Passed    | Run time: 1 ms           | Round 7, Guess 4: makeGuess result Map
+ 260 | Passed    | Run time: 0 ms           | Round 7, Guess 4: Word count
+ 261 | Passed    | Run time: 0 ms           | Round 7, Guess 4: Current pattern
+ 262 | Passed    | Run time: 1 ms           | Round 7, Guess 5: makeGuess result Map
+ 263 | Passed    | Run time: 0 ms           | Round 7, Guess 5: Word count
+ 264 | Passed    | Run time: 0 ms           | Round 7, Guess 5: Current pattern
+ 265 | Passed    | Run time: 0 ms           | Round 7, Guess 6: makeGuess result Map
+ 266 | Passed    | Run time: 0 ms           | Round 7, Guess 6: Word count
+ 267 | Passed    | Run time: 0 ms           | Round 7, Guess 6: Current pattern
+ 268 | Passed    | Run time: 0 ms           | Round 7, Guess 7: makeGuess result Map
+ 269 | Passed    | Run time: 0 ms           | Round 7, Guess 7: Word count
+ 270 | Passed    | Run time: 0 ms           | Round 7, Guess 7: Current pattern
+ 271 | Passed    | Run time: 0 ms           | Round 7, Guess 8: makeGuess result Map
+ 272 | Passed    | Run time: 0 ms           | Round 7, Guess 8: Word count
+ 273 | Passed    | Run time: 0 ms           | Round 7, Guess 8: Current pattern
+ 274 | Passed    | Run time: 0 ms           | Round 7, Guess 9: makeGuess result Map
+ 275 | Passed    | Run time: 0 ms           | Round 7, Guess 9: Word count
+ 276 | Passed    | Run time: 0 ms           | Round 7, Guess 9: Current pattern
+ 277 | Passed    | Run time: 1 ms           | Round 7, Guess 10: makeGuess result Map
+ 278 | Passed    | Run time: 0 ms           | Round 7, Guess 10: Word count
+ 279 | Passed    | Run time: 0 ms           | Round 7, Guess 10: Current pattern
+ 280 | Passed    | Run time: 0 ms           | Round 7, Guess 11: makeGuess result Map
+ 281 | Passed    | Run time: 0 ms           | Round 7, Guess 11: Word count
+ 282 | Passed    | Run time: 0 ms           | Round 7, Guess 11: Current pattern
+ 283 | Passed    | Run time: 0 ms           | Round 7, Guess 12: makeGuess result Map
+ 284 | Passed    | Run time: 0 ms           | Round 7, Guess 12: Word count
+ 285 | Passed    | Run time: 0 ms           | Round 7, Guess 12: Current pattern
+ 286 | Passed    | Run time: 0 ms           | Round 7, Guess 13: makeGuess result Map
+ 287 | Passed    | Run time: 0 ms           | Round 7, Guess 13: Word count
+ 288 | Passed    | Run time: 0 ms           | Round 7, Guess 13: Current pattern
+ 289 | Passed    | Run time: 0 ms           | Round 7, Guess 14: makeGuess result Map
+ 290 | Passed    | Run time: 0 ms           | Round 7, Guess 14: Word count
+ 291 | Passed    | Run time: 0 ms           | Round 7, Guess 14: Current pattern
+ 292 | Passed    | Run time: 0 ms           | Round 7, Guess 15: makeGuess result Map
+ 293 | Passed    | Run time: 0 ms           | Round 7, Guess 15: Word count
+ 294 | Passed    | Run time: 0 ms           | Round 7, Guess 15: Current pattern
+ 295 | Passed    | Run time: 0 ms           | Round 7, Guess 16: makeGuess result Map
+ 296 | Passed    | Run time: 0 ms           | Round 7, Guess 16: Word count
+ 297 | Passed    | Run time: 0 ms           | Round 7, Guess 16: Current pattern
+ 298 | Passed    | Run time: 0 ms           | Round 7, Guess 17: makeGuess result Map
+ 299 | Passed    | Run time: 0 ms           | Round 7, Guess 17: Word count
+ 300 | Passed    | Run time: 0 ms           | Round 7, Guess 17: Current pattern
+ 301 | Passed    | Run time: 0 ms           | Round 7, Guess 18: makeGuess result Map
+ 302 | Passed    | Run time: 0 ms           | Round 7, Guess 18: Word count
+ 303 | Passed    | Run time: 0 ms           | Round 7, Guess 18: Current pattern
+ 304 | Passed    | Run time: 0 ms           | Round 7, Guess 19: makeGuess result Map
+ 305 | Passed    | Run time: 0 ms           | Round 7, Guess 19: Word count
+ 306 | Passed    | Run time: 0 ms           | Round 7, Guess 19: Current pattern
+ 307 | Passed    | Run time: 0 ms           | Round 7, Guess 20: makeGuess result Map
+ 308 | Passed    | Run time: 0 ms           | Round 7, Guess 20: Word count
+ 309 | Passed    | Run time: 0 ms           | Round 7, Guess 20: Current pattern
+ 310 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 8
+ 311 | Passed    | Run time: 0 ms           | Round 8: Prep for round & Initial number of words
+ 312 | Passed    | Run time: 0 ms           | Round 8: Initial pattern
+ 313 | Passed    | Run time: 0 ms           | Round 8, Guess 0: makeGuess result Map
+ 314 | Passed    | Run time: 0 ms           | Round 8, Guess 0: Word count
+ 315 | Passed    | Run time: 0 ms           | Round 8, Guess 0: Current pattern
+ 316 | Passed    | Run time: 2 ms           | Round 8, Guess 1: makeGuess result Map
+ 317 | Passed    | Run time: 0 ms           | Round 8, Guess 1: Word count
+ 318 | Passed    | Run time: 0 ms           | Round 8, Guess 1: Current pattern
+ 319 | Passed    | Run time: 1 ms           | Round 8, Guess 2: makeGuess result Map
+ 320 | Passed    | Run time: 0 ms           | Round 8, Guess 2: Word count
+ 321 | Passed    | Run time: 0 ms           | Round 8, Guess 2: Current pattern
+ 322 | Passed    | Run time: 2 ms           | Round 8, Guess 3: makeGuess result Map
+ 323 | Passed    | Run time: 0 ms           | Round 8, Guess 3: Word count
+ 324 | Passed    | Run time: 0 ms           | Round 8, Guess 3: Current pattern
+ 325 | Passed    | Run time: 1 ms           | Round 8, Guess 4: makeGuess result Map
+ 326 | Passed    | Run time: 0 ms           | Round 8, Guess 4: Word count
+ 327 | Passed    | Run time: 0 ms           | Round 8, Guess 4: Current pattern
+ 328 | Passed    | Run time: 1 ms           | Round 8, Guess 5: makeGuess result Map
+ 329 | Passed    | Run time: 0 ms           | Round 8, Guess 5: Word count
+ 330 | Passed    | Run time: 0 ms           | Round 8, Guess 5: Current pattern
+ 331 | Passed    | Run time: 1 ms           | Round 8, Guess 6: makeGuess result Map
+ 332 | Passed    | Run time: 0 ms           | Round 8, Guess 6: Word count
+ 333 | Passed    | Run time: 0 ms           | Round 8, Guess 6: Current pattern
+ 334 | Passed    | Run time: 2 ms           | Round 8, Guess 7: makeGuess result Map
+ 335 | Passed    | Run time: 0 ms           | Round 8, Guess 7: Word count
+ 336 | Passed    | Run time: 1 ms           | Round 8, Guess 7: Current pattern
+ 337 | Passed    | Run time: 0 ms           | Round 8, Guess 8: makeGuess result Map
+ 338 | Passed    | Run time: 0 ms           | Round 8, Guess 8: Word count
+ 339 | Passed    | Run time: 0 ms           | Round 8, Guess 8: Current pattern
+ 340 | Passed    | Run time: 0 ms           | Round 8, Guess 9: makeGuess result Map
+ 341 | Passed    | Run time: 0 ms           | Round 8, Guess 9: Word count
+ 342 | Passed    | Run time: 0 ms           | Round 8, Guess 9: Current pattern
+ 343 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 9
+ 344 | Passed    | Run time: 1 ms           | Round 9: Prep for round & Initial number of words
+ 345 | Passed    | Run time: 0 ms           | Round 9: Initial pattern
+ 346 | Passed    | Run time: 2 ms           | Round 9, Guess 0: makeGuess result Map
+ 347 | Passed    | Run time: 0 ms           | Round 9, Guess 0: Word count
+ 348 | Passed    | Run time: 0 ms           | Round 9, Guess 0: Current pattern
+ 349 | Passed    | Run time: 2 ms           | Round 9, Guess 1: makeGuess result Map
+ 350 | Passed    | Run time: 0 ms           | Round 9, Guess 1: Word count
+ 351 | Passed    | Run time: 0 ms           | Round 9, Guess 1: Current pattern
+ 352 | Passed    | Run time: 1 ms           | Round 9, Guess 2: makeGuess result Map
+ 353 | Passed    | Run time: 0 ms           | Round 9, Guess 2: Word count
+ 354 | Passed    | Run time: 0 ms           | Round 9, Guess 2: Current pattern
+ 355 | Passed    | Run time: 1 ms           | Round 9, Guess 3: makeGuess result Map
+ 356 | Passed    | Run time: 0 ms           | Round 9, Guess 3: Word count
+ 357 | Passed    | Run time: 0 ms           | Round 9, Guess 3: Current pattern
+ 358 | Passed    | Run time: 1 ms           | Round 9, Guess 4: makeGuess result Map
+ 359 | Passed    | Run time: 0 ms           | Round 9, Guess 4: Word count
+ 360 | Passed    | Run time: 0 ms           | Round 9, Guess 4: Current pattern
+ 361 | Passed    | Run time: 1 ms           | Round 9, Guess 5: makeGuess result Map
+ 362 | Passed    | Run time: 0 ms           | Round 9, Guess 5: Word count
+ 363 | Passed    | Run time: 0 ms           | Round 9, Guess 5: Current pattern
+ 364 | Passed    | Run time: 2 ms           | Round 9, Guess 6: makeGuess result Map
+ 365 | Passed    | Run time: 0 ms           | Round 9, Guess 6: Word count
+ 366 | Passed    | Run time: 0 ms           | Round 9, Guess 6: Current pattern
+ 367 | Passed    | Run time: 2 ms           | Round 9, Guess 7: makeGuess result Map
+ 368 | Passed    | Run time: 0 ms           | Round 9, Guess 7: Word count
+ 369 | Passed    | Run time: 0 ms           | Round 9, Guess 7: Current pattern
+ 370 | Passed    | Run time: 1 ms           | Round 9, Guess 8: makeGuess result Map
+ 371 | Passed    | Run time: 0 ms           | Round 9, Guess 8: Word count
+ 372 | Passed    | Run time: 0 ms           | Round 9, Guess 8: Current pattern
+ 373 | Passed    | Run time: 0 ms           | Round 9, Guess 9: makeGuess result Map
+ 374 | Passed    | Run time: 0 ms           | Round 9, Guess 9: Word count
+ 375 | Passed    | Run time: 0 ms           | Round 9, Guess 9: Current pattern
+ 376 | Passed    | Run time: 1 ms           | Construct HangmanManager - Round 10
+ 377 | Passed    | Run time: 0 ms           | Round 10: Prep for round & Initial number of words
+ 378 | Passed    | Run time: 0 ms           | Round 10: Initial pattern
+ 379 | Passed    | Run time: 1 ms           | Round 10, Guess 0: makeGuess result Map
+ 380 | Passed    | Run time: 0 ms           | Round 10, Guess 0: Word count
+ 381 | Passed    | Run time: 0 ms           | Round 10, Guess 0: Current pattern
+ 382 | Passed    | Run time: 1 ms           | Round 10, Guess 1: makeGuess result Map
+ 383 | Passed    | Run time: 0 ms           | Round 10, Guess 1: Word count
+ 384 | Passed    | Run time: 0 ms           | Round 10, Guess 1: Current pattern
+ 385 | Passed    | Run time: 0 ms           | Round 10, Guess 2: makeGuess result Map
+ 386 | Passed    | Run time: 0 ms           | Round 10, Guess 2: Word count
+ 387 | Passed    | Run time: 0 ms           | Round 10, Guess 2: Current pattern
+ 388 | Passed    | Run time: 1 ms           | Round 10, Guess 3: makeGuess result Map
+ 389 | Passed    | Run time: 0 ms           | Round 10, Guess 3: Word count
+ 390 | Passed    | Run time: 0 ms           | Round 10, Guess 3: Current pattern
+ 391 | Passed    | Run time: 1 ms           | Round 10, Guess 4: makeGuess result Map
+ 392 | Passed    | Run time: 0 ms           | Round 10, Guess 4: Word count
+ 393 | Passed    | Run time: 0 ms           | Round 10, Guess 4: Current pattern
+ 394 | Passed    | Run time: 1 ms           | Round 10, Guess 5: makeGuess result Map
+ 395 | Passed    | Run time: 0 ms           | Round 10, Guess 5: Word count
+ 396 | Passed    | Run time: 0 ms           | Round 10, Guess 5: Current pattern
+ 397 | Passed    | Run time: 0 ms           | Round 10, Guess 6: makeGuess result Map
+ 398 | Passed    | Run time: 0 ms           | Round 10, Guess 6: Word count
+ 399 | Passed    | Run time: 0 ms           | Round 10, Guess 6: Current pattern
+ 400 | Passed    | Run time: 1 ms           | Round 10, Guess 7: makeGuess result Map
+ 401 | Passed    | Run time: 0 ms           | Round 10, Guess 7: Word count
+ 402 | Passed    | Run time: 0 ms           | Round 10, Guess 7: Current pattern
+ 403 | Passed    | Run time: 0 ms           | Round 10, Guess 8: makeGuess result Map
+ 404 | Passed    | Run time: 0 ms           | Round 10, Guess 8: Word count
+ 405 | Passed    | Run time: 0 ms           | Round 10, Guess 8: Current pattern
+ 406 | Passed    | Run time: 0 ms           | Round 10, Guess 9: makeGuess result Map
+ 407 | Passed    | Run time: 0 ms           | Round 10, Guess 9: Word count
+ 408 | Passed    | Run time: 0 ms           | Round 10, Guess 9: Current pattern
+ 409 | Passed    | Run time: 0 ms           | Round 10, Guess 10: makeGuess result Map
+ 410 | Passed    | Run time: 0 ms           | Round 10, Guess 10: Word count
+ 411 | Passed    | Run time: 0 ms           | Round 10, Guess 10: Current pattern
+ 412 | Passed    | Run time: 0 ms           | Round 10, Guess 11: makeGuess result Map
+ 413 | Passed    | Run time: 0 ms           | Round 10, Guess 11: Word count
+ 414 | Passed    | Run time: 0 ms           | Round 10, Guess 11: Current pattern
+ 415 | Passed    | Run time: 0 ms           | Round 10, Guess 12: makeGuess result Map
+ 416 | Passed    | Run time: 0 ms           | Round 10, Guess 12: Word count
+ 417 | Passed    | Run time: 0 ms           | Round 10, Guess 12: Current pattern
+ 418 | Passed    | Run time: 0 ms           | Round 10, Guess 13: makeGuess result Map
+ 419 | Passed    | Run time: 0 ms           | Round 10, Guess 13: Word count
+ 420 | Passed    | Run time: 0 ms           | Round 10, Guess 13: Current pattern
+ 421 | Passed    | Run time: 0 ms           | Round 10, Guess 14: makeGuess result Map
+ 422 | Passed    | Run time: 0 ms           | Round 10, Guess 14: Word count
+ 423 | Passed    | Run time: 0 ms           | Round 10, Guess 14: Current pattern
+ 424 | Passed    | Run time: 0 ms           | Round 10, Guess 15: makeGuess result Map
+ 425 | Passed    | Run time: 0 ms           | Round 10, Guess 15: Word count
+ 426 | Passed    | Run time: 0 ms           | Round 10, Guess 15: Current pattern
+ 427 | Passed    | Run time: 0 ms           | Round 10, Guess 16: makeGuess result Map
+ 428 | Passed    | Run time: 0 ms           | Round 10, Guess 16: Word count
+ 429 | Passed    | Run time: 0 ms           | Round 10, Guess 16: Current pattern
+ 430 | Passed    | Run time: 0 ms           | Round 10, Guess 17: makeGuess result Map
+ 431 | Passed    | Run time: 0 ms           | Round 10, Guess 17: Word count
+ 432 | Passed    | Run time: 0 ms           | Round 10, Guess 17: Current pattern
+ 433 | Passed    | Run time: 0 ms           | Round 10, Guess 18: makeGuess result Map
+ 434 | Passed    | Run time: 0 ms           | Round 10, Guess 18: Word count
+ 435 | Passed    | Run time: 0 ms           | Round 10, Guess 18: Current pattern
+ 436 | Passed    | Run time: 0 ms           | Round 10, Guess 19: makeGuess result Map
+ 437 | Passed    | Run time: 0 ms           | Round 10, Guess 19: Word count
+ 438 | Passed    | Run time: 0 ms           | Round 10, Guess 19: Current pattern
+ 439 | Passed    | Run time: 1 ms           | Construct HangmanManager - Round 11
+ 440 | Passed    | Run time: 1 ms           | Round 11: Prep for round & Initial number of words
+ 441 | Passed    | Run time: 0 ms           | Round 11: Initial pattern
+ 442 | Passed    | Run time: 1 ms           | Round 11, Guess 0: makeGuess result Map
+ 443 | Passed    | Run time: 0 ms           | Round 11, Guess 0: Word count
+ 444 | Passed    | Run time: 0 ms           | Round 11, Guess 0: Current pattern
+ 445 | Passed    | Run time: 2 ms           | Round 11, Guess 1: makeGuess result Map
+ 446 | Passed    | Run time: 0 ms           | Round 11, Guess 1: Word count
+ 447 | Passed    | Run time: 0 ms           | Round 11, Guess 1: Current pattern
+ 448 | Passed    | Run time: 0 ms           | Round 11, Guess 2: makeGuess result Map
+ 449 | Passed    | Run time: 0 ms           | Round 11, Guess 2: Word count
+ 450 | Passed    | Run time: 0 ms           | Round 11, Guess 2: Current pattern
+ 451 | Passed    | Run time: 0 ms           | Round 11, Guess 3: makeGuess result Map
+ 452 | Passed    | Run time: 0 ms           | Round 11, Guess 3: Word count
+ 453 | Passed    | Run time: 0 ms           | Round 11, Guess 3: Current pattern
+ 454 | Passed    | Run time: 0 ms           | Round 11, Guess 4: makeGuess result Map
+ 455 | Passed    | Run time: 0 ms           | Round 11, Guess 4: Word count
+ 456 | Passed    | Run time: 0 ms           | Round 11, Guess 4: Current pattern
+ 457 | Passed    | Run time: 0 ms           | Round 11, Guess 5: makeGuess result Map
+ 458 | Failed    | NullPointerException     | Round 11, Guess 5: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 459 | Failed    | Incorrect return value   | Round 11, Guess 5: Current pattern
+ 460 | Failed    | NullPointerException     | Round 11, Guess 6: makeGuess result Map
+      java.lang.NullPointerException
+ 461 | Failed    | NullPointerException     | Round 11, Guess 6: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 462 | Failed    | Incorrect return value   | Round 11, Guess 6: Current pattern
+ 463 | Failed    | NullPointerException     | Round 11, Guess 7: makeGuess result Map
+      java.lang.NullPointerException
+ 464 | Failed    | NullPointerException     | Round 11, Guess 7: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 465 | Failed    | Incorrect return value   | Round 11, Guess 7: Current pattern
+ 466 | Failed    | NullPointerException     | Round 11, Guess 8: makeGuess result Map
+      java.lang.NullPointerException
+ 467 | Failed    | NullPointerException     | Round 11, Guess 8: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 468 | Failed    | Incorrect return value   | Round 11, Guess 8: Current pattern
+ 469 | Failed    | NullPointerException     | Round 11, Guess 9: makeGuess result Map
+      java.lang.NullPointerException
+ 470 | Failed    | NullPointerException     | Round 11, Guess 9: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 471 | Failed    | Incorrect return value   | Round 11, Guess 9: Current pattern
+ 472 | Failed    | NullPointerException     | Round 11, Guess 10: makeGuess result Map
+      java.lang.NullPointerException
+ 473 | Failed    | NullPointerException     | Round 11, Guess 10: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 474 | Failed    | Incorrect return value   | Round 11, Guess 10: Current pattern
+ 475 | Failed    | NullPointerException     | Round 11, Guess 11: makeGuess result Map
+      java.lang.NullPointerException
+ 476 | Failed    | NullPointerException     | Round 11, Guess 11: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 477 | Failed    | Incorrect return value   | Round 11, Guess 11: Current pattern
+ 478 | Failed    | NullPointerException     | Round 11, Guess 12: makeGuess result Map
+      java.lang.NullPointerException
+ 479 | Failed    | NullPointerException     | Round 11, Guess 12: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 480 | Failed    | Incorrect return value   | Round 11, Guess 12: Current pattern
+ 481 | Failed    | NullPointerException     | Round 11, Guess 13: makeGuess result Map
+      java.lang.NullPointerException
+ 482 | Failed    | NullPointerException     | Round 11, Guess 13: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 483 | Failed    | Incorrect return value   | Round 11, Guess 13: Current pattern
+ 484 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 12
+ 485 | Passed    | Run time: 1 ms           | Round 12: Prep for round & Initial number of words
+ 486 | Passed    | Run time: 0 ms           | Round 12: Initial pattern
+ 487 | Passed    | Run time: 1 ms           | Round 12, Guess 0: makeGuess result Map
+ 488 | Passed    | Run time: 0 ms           | Round 12, Guess 0: Word count
+ 489 | Passed    | Run time: 0 ms           | Round 12, Guess 0: Current pattern
+ 490 | Passed    | Run time: 0 ms           | Round 12, Guess 1: makeGuess result Map
+ 491 | Passed    | Run time: 0 ms           | Round 12, Guess 1: Word count
+ 492 | Passed    | Run time: 0 ms           | Round 12, Guess 1: Current pattern
+ 493 | Passed    | Run time: 0 ms           | Round 12, Guess 2: makeGuess result Map
+ 494 | Passed    | Run time: 0 ms           | Round 12, Guess 2: Word count
+ 495 | Passed    | Run time: 0 ms           | Round 12, Guess 2: Current pattern
+ 496 | Passed    | Run time: 0 ms           | Round 12, Guess 3: makeGuess result Map
+ 497 | Passed    | Run time: 0 ms           | Round 12, Guess 3: Word count
+ 498 | Passed    | Run time: 0 ms           | Round 12, Guess 3: Current pattern
+ 499 | Passed    | Run time: 1 ms           | Round 12, Guess 4: makeGuess result Map
+ 500 | Passed    | Run time: 0 ms           | Round 12, Guess 4: Word count
+ 501 | Passed    | Run time: 0 ms           | Round 12, Guess 4: Current pattern
+ 502 | Passed    | Run time: 1 ms           | Round 12, Guess 5: makeGuess result Map
+ 503 | Passed    | Run time: 0 ms           | Round 12, Guess 5: Word count
+ 504 | Passed    | Run time: 0 ms           | Round 12, Guess 5: Current pattern
+ 505 | Passed    | Run time: 0 ms           | Round 12, Guess 6: makeGuess result Map
+ 506 | Passed    | Run time: 0 ms           | Round 12, Guess 6: Word count
+ 507 | Passed    | Run time: 0 ms           | Round 12, Guess 6: Current pattern
+ 508 | Passed    | Run time: 0 ms           | Round 12, Guess 7: makeGuess result Map
+ 509 | Passed    | Run time: 0 ms           | Round 12, Guess 7: Word count
+ 510 | Passed    | Run time: 0 ms           | Round 12, Guess 7: Current pattern
+ 511 | Passed    | Run time: 0 ms           | Round 12, Guess 8: makeGuess result Map
+ 512 | Passed    | Run time: 0 ms           | Round 12, Guess 8: Word count
+ 513 | Passed    | Run time: 0 ms           | Round 12, Guess 8: Current pattern
+ 514 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 13
+ 515 | Passed    | Run time: 1 ms           | Round 13: Prep for round & Initial number of words
+ 516 | Passed    | Run time: 0 ms           | Round 13: Initial pattern
+ 517 | Passed    | Run time: 2 ms           | Round 13, Guess 0: makeGuess result Map
+ 518 | Passed    | Run time: 0 ms           | Round 13, Guess 0: Word count
+ 519 | Passed    | Run time: 0 ms           | Round 13, Guess 0: Current pattern
+ 520 | Passed    | Run time: 3 ms           | Round 13, Guess 1: makeGuess result Map
+ 521 | Passed    | Run time: 0 ms           | Round 13, Guess 1: Word count
+ 522 | Passed    | Run time: 0 ms           | Round 13, Guess 1: Current pattern
+ 523 | Passed    | Run time: 0 ms           | Round 13, Guess 2: makeGuess result Map
+ 524 | Passed    | Run time: 0 ms           | Round 13, Guess 2: Word count
+ 525 | Passed    | Run time: 0 ms           | Round 13, Guess 2: Current pattern
+ 526 | Passed    | Run time: 0 ms           | Round 13, Guess 3: makeGuess result Map
+ 527 | Passed    | Run time: 0 ms           | Round 13, Guess 3: Word count
+ 528 | Passed    | Run time: 0 ms           | Round 13, Guess 3: Current pattern
+ 529 | Passed    | Run time: 0 ms           | Round 13, Guess 4: makeGuess result Map
+ 530 | Passed    | Run time: 0 ms           | Round 13, Guess 4: Word count
+ 531 | Passed    | Run time: 0 ms           | Round 13, Guess 4: Current pattern
+ 532 | Passed    | Run time: 0 ms           | Round 13, Guess 5: makeGuess result Map
+ 533 | Passed    | Run time: 0 ms           | Round 13, Guess 5: Word count
+ 534 | Passed    | Run time: 0 ms           | Round 13, Guess 5: Current pattern
+ 535 | Passed    | Run time: 0 ms           | Round 13, Guess 6: makeGuess result Map
+ 536 | Passed    | Run time: 0 ms           | Round 13, Guess 6: Word count
+ 537 | Passed    | Run time: 0 ms           | Round 13, Guess 6: Current pattern
+ 538 | Passed    | Run time: 0 ms           | Round 13, Guess 7: makeGuess result Map
+ 539 | Passed    | Run time: 0 ms           | Round 13, Guess 7: Word count
+ 540 | Passed    | Run time: 0 ms           | Round 13, Guess 7: Current pattern
+ 541 | Passed    | Run time: 0 ms           | Round 13, Guess 8: makeGuess result Map
+ 542 | Passed    | Run time: 0 ms           | Round 13, Guess 8: Word count
+ 543 | Passed    | Run time: 0 ms           | Round 13, Guess 8: Current pattern
+ 544 | Passed    | Run time: 0 ms           | Round 13, Guess 9: makeGuess result Map
+ 545 | Passed    | Run time: 0 ms           | Round 13, Guess 9: Word count
+ 546 | Passed    | Run time: 0 ms           | Round 13, Guess 9: Current pattern
+ 547 | Passed    | Run time: 0 ms           | Round 13, Guess 10: makeGuess result Map
+ 548 | Passed    | Run time: 0 ms           | Round 13, Guess 10: Word count
+ 549 | Passed    | Run time: 0 ms           | Round 13, Guess 10: Current pattern
+ 550 | Passed    | Run time: 0 ms           | Round 13, Guess 11: makeGuess result Map
+ 551 | Passed    | Run time: 0 ms           | Round 13, Guess 11: Word count
+ 552 | Passed    | Run time: 0 ms           | Round 13, Guess 11: Current pattern
+ 553 | Passed    | Run time: 0 ms           | Round 13, Guess 12: makeGuess result Map
+ 554 | Passed    | Run time: 0 ms           | Round 13, Guess 12: Word count
+ 555 | Passed    | Run time: 0 ms           | Round 13, Guess 12: Current pattern
+ 556 | Passed    | Run time: 0 ms           | Round 13, Guess 13: makeGuess result Map
+ 557 | Passed    | Run time: 0 ms           | Round 13, Guess 13: Word count
+ 558 | Passed    | Run time: 0 ms           | Round 13, Guess 13: Current pattern
+ 559 | Passed    | Run time: 0 ms           | Round 13, Guess 14: makeGuess result Map
+ 560 | Passed    | Run time: 0 ms           | Round 13, Guess 14: Word count
+ 561 | Passed    | Run time: 0 ms           | Round 13, Guess 14: Current pattern
+ 562 | Passed    | Run time: 0 ms           | Round 13, Guess 15: makeGuess result Map
+ 563 | Passed    | Run time: 0 ms           | Round 13, Guess 15: Word count
+ 564 | Passed    | Run time: 0 ms           | Round 13, Guess 15: Current pattern
+ 565 | Passed    | Run time: 0 ms           | Round 13, Guess 16: makeGuess result Map
+ 566 | Passed    | Run time: 0 ms           | Round 13, Guess 16: Word count
+ 567 | Passed    | Run time: 0 ms           | Round 13, Guess 16: Current pattern
+ 568 | Passed    | Run time: 0 ms           | Round 13, Guess 17: makeGuess result Map
+ 569 | Passed    | Run time: 0 ms           | Round 13, Guess 17: Word count
+ 570 | Passed    | Run time: 1 ms           | Round 13, Guess 17: Current pattern
+ 571 | Passed    | Run time: 0 ms           | Round 13, Guess 18: makeGuess result Map
+ 572 | Passed    | Run time: 0 ms           | Round 13, Guess 18: Word count
+ 573 | Passed    | Run time: 0 ms           | Round 13, Guess 18: Current pattern
+ 574 | Passed    | Run time: 0 ms           | Round 13, Guess 19: makeGuess result Map
+ 575 | Passed    | Run time: 0 ms           | Round 13, Guess 19: Word count
+ 576 | Passed    | Run time: 0 ms           | Round 13, Guess 19: Current pattern
+ 577 | Passed    | Run time: 0 ms           | Round 13, Guess 20: makeGuess result Map
+ 578 | Passed    | Run time: 0 ms           | Round 13, Guess 20: Word count
+ 579 | Passed    | Run time: 0 ms           | Round 13, Guess 20: Current pattern
+ 580 | Passed    | Run time: 0 ms           | Round 13, Guess 21: makeGuess result Map
+ 581 | Passed    | Run time: 0 ms           | Round 13, Guess 21: Word count
+ 582 | Passed    | Run time: 0 ms           | Round 13, Guess 21: Current pattern
+ 583 | Passed    | Run time: 0 ms           | Round 13, Guess 22: makeGuess result Map
+ 584 | Passed    | Run time: 0 ms           | Round 13, Guess 22: Word count
+ 585 | Passed    | Run time: 0 ms           | Round 13, Guess 22: Current pattern
+ 586 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 14
+ 587 | Passed    | Run time: 1 ms           | Round 14: Prep for round & Initial number of words
+ 588 | Passed    | Run time: 0 ms           | Round 14: Initial pattern
+ 589 | Passed    | Run time: 4 ms           | Round 14, Guess 0: makeGuess result Map
+ 590 | Passed    | Run time: 0 ms           | Round 14, Guess 0: Word count
+ 591 | Passed    | Run time: 0 ms           | Round 14, Guess 0: Current pattern
+ 592 | Passed    | Run time: 4 ms           | Round 14, Guess 1: makeGuess result Map
+ 593 | Passed    | Run time: 0 ms           | Round 14, Guess 1: Word count
+ 594 | Passed    | Run time: 0 ms           | Round 14, Guess 1: Current pattern
+ 595 | Passed    | Run time: 2 ms           | Round 14, Guess 2: makeGuess result Map
+ 596 | Passed    | Run time: 0 ms           | Round 14, Guess 2: Word count
+ 597 | Passed    | Run time: 0 ms           | Round 14, Guess 2: Current pattern
+ 598 | Passed    | Run time: 2 ms           | Round 14, Guess 3: makeGuess result Map
+ 599 | Passed    | Run time: 0 ms           | Round 14, Guess 3: Word count
+ 600 | Passed    | Run time: 0 ms           | Round 14, Guess 3: Current pattern
+ 601 | Passed    | Run time: 0 ms           | Round 14, Guess 4: makeGuess result Map
+ 602 | Passed    | Run time: 0 ms           | Round 14, Guess 4: Word count
+ 603 | Passed    | Run time: 0 ms           | Round 14, Guess 4: Current pattern
+ 604 | Passed    | Run time: 0 ms           | Round 14, Guess 5: makeGuess result Map
+ 605 | Passed    | Run time: 0 ms           | Round 14, Guess 5: Word count
+ 606 | Passed    | Run time: 0 ms           | Round 14, Guess 5: Current pattern
+ 607 | Passed    | Run time: 0 ms           | Round 14, Guess 6: makeGuess result Map
+ 608 | Passed    | Run time: 0 ms           | Round 14, Guess 6: Word count
+ 609 | Passed    | Run time: 0 ms           | Round 14, Guess 6: Current pattern
+ 610 | Passed    | Run time: 0 ms           | Round 14, Guess 7: makeGuess result Map
+ 611 | Passed    | Run time: 0 ms           | Round 14, Guess 7: Word count
+ 612 | Passed    | Run time: 0 ms           | Round 14, Guess 7: Current pattern
+ 613 | Passed    | Run time: 0 ms           | Round 14, Guess 8: makeGuess result Map
+ 614 | Passed    | Run time: 0 ms           | Round 14, Guess 8: Word count
+ 615 | Passed    | Run time: 0 ms           | Round 14, Guess 8: Current pattern
+ 616 | Passed    | Run time: 0 ms           | Round 14, Guess 9: makeGuess result Map
+ 617 | Passed    | Run time: 0 ms           | Round 14, Guess 9: Word count
+ 618 | Passed    | Run time: 0 ms           | Round 14, Guess 9: Current pattern
+ 619 | Passed    | Run time: 0 ms           | Round 14, Guess 10: makeGuess result Map
+ 620 | Passed    | Run time: 0 ms           | Round 14, Guess 10: Word count
+ 621 | Passed    | Run time: 0 ms           | Round 14, Guess 10: Current pattern
+ 622 | Passed    | Run time: 0 ms           | Round 14, Guess 11: makeGuess result Map
+ 623 | Passed    | Run time: 0 ms           | Round 14, Guess 11: Word count
+ 624 | Passed    | Run time: 0 ms           | Round 14, Guess 11: Current pattern
+ 625 | Passed    | Run time: 0 ms           | Round 14, Guess 12: makeGuess result Map
+ 626 | Passed    | Run time: 0 ms           | Round 14, Guess 12: Word count
+ 627 | Passed    | Run time: 0 ms           | Round 14, Guess 12: Current pattern
+ 628 | Passed    | Run time: 0 ms           | Round 14, Guess 13: makeGuess result Map
+ 629 | Passed    | Run time: 0 ms           | Round 14, Guess 13: Word count
+ 630 | Passed    | Run time: 0 ms           | Round 14, Guess 13: Current pattern
+ 631 | Passed    | Run time: 0 ms           | Round 14, Guess 14: makeGuess result Map
+ 632 | Passed    | Run time: 0 ms           | Round 14, Guess 14: Word count
+ 633 | Passed    | Run time: 0 ms           | Round 14, Guess 14: Current pattern
+ 634 | Passed    | Run time: 0 ms           | Round 14, Guess 15: makeGuess result Map
+ 635 | Passed    | Run time: 0 ms           | Round 14, Guess 15: Word count
+ 636 | Passed    | Run time: 0 ms           | Round 14, Guess 15: Current pattern
+ 637 | Passed    | Run time: 0 ms           | Round 14, Guess 16: makeGuess result Map
+ 638 | Passed    | Run time: 0 ms           | Round 14, Guess 16: Word count
+ 639 | Passed    | Run time: 0 ms           | Round 14, Guess 16: Current pattern
+ 640 | Passed    | Run time: 1 ms           | Round 14, Guess 17: makeGuess result Map
+ 641 | Passed    | Run time: 0 ms           | Round 14, Guess 17: Word count
+ 642 | Passed    | Run time: 0 ms           | Round 14, Guess 17: Current pattern
+ 643 | Passed    | Run time: 0 ms           | Round 14, Guess 18: makeGuess result Map
+ 644 | Passed    | Run time: 0 ms           | Round 14, Guess 18: Word count
+ 645 | Passed    | Run time: 0 ms           | Round 14, Guess 18: Current pattern
+ 646 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 15
+ 647 | Passed    | Run time: 1 ms           | Round 14: Prep for round & Initial number of words
+ 648 | Passed    | Run time: 0 ms           | Round 14: Initial pattern
+ 649 | Passed    | Run time: 6 ms           | Round 14, Guess 0: makeGuess result Map
+ 650 | Passed    | Run time: 0 ms           | Round 14, Guess 0: Word count
+ 651 | Passed    | Run time: 0 ms           | Round 14, Guess 0: Current pattern
+ 652 | Passed    | Run time: 4 ms           | Round 14, Guess 1: makeGuess result Map
+ 653 | Passed    | Run time: 0 ms           | Round 14, Guess 1: Word count
+ 654 | Passed    | Run time: 0 ms           | Round 14, Guess 1: Current pattern
+ 655 | Passed    | Run time: 0 ms           | Round 14, Guess 2: makeGuess result Map
+ 656 | Passed    | Run time: 0 ms           | Round 14, Guess 2: Word count
+ 657 | Passed    | Run time: 0 ms           | Round 14, Guess 2: Current pattern
+ 658 | Passed    | Run time: 0 ms           | Round 14, Guess 3: makeGuess result Map
+ 659 | Passed    | Run time: 0 ms           | Round 14, Guess 3: Word count
+ 660 | Passed    | Run time: 0 ms           | Round 14, Guess 3: Current pattern
+ 661 | Passed    | Run time: 0 ms           | Round 14, Guess 4: makeGuess result Map
+ 662 | Passed    | Run time: 0 ms           | Round 14, Guess 4: Word count
+ 663 | Passed    | Run time: 0 ms           | Round 14, Guess 4: Current pattern
+ 664 | Passed    | Run time: 0 ms           | Round 14, Guess 5: makeGuess result Map
+ 665 | Failed    | NullPointerException     | Round 14, Guess 5: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 666 | Failed    | Incorrect return value   | Round 14, Guess 5: Current pattern
+ 667 | Failed    | NullPointerException     | Round 14, Guess 6: makeGuess result Map
+      java.lang.NullPointerException
+ 668 | Failed    | NullPointerException     | Round 14, Guess 6: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 669 | Failed    | Incorrect return value   | Round 14, Guess 6: Current pattern
+ 670 | Failed    | NullPointerException     | Round 14, Guess 7: makeGuess result Map
+      java.lang.NullPointerException
+ 671 | Failed    | NullPointerException     | Round 14, Guess 7: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 672 | Failed    | Incorrect return value   | Round 14, Guess 7: Current pattern
+ 673 | Failed    | NullPointerException     | Round 14, Guess 8: makeGuess result Map
+      java.lang.NullPointerException
+ 674 | Failed    | NullPointerException     | Round 14, Guess 8: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 675 | Failed    | Incorrect return value   | Round 14, Guess 8: Current pattern
+ 676 | Failed    | NullPointerException     | Round 14, Guess 9: makeGuess result Map
+      java.lang.NullPointerException
+ 677 | Failed    | NullPointerException     | Round 14, Guess 9: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 678 | Failed    | Incorrect return value   | Round 14, Guess 9: Current pattern
+ 679 | Failed    | NullPointerException     | Round 14, Guess 10: makeGuess result Map
+      java.lang.NullPointerException
+ 680 | Failed    | NullPointerException     | Round 14, Guess 10: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 681 | Failed    | Incorrect return value   | Round 14, Guess 10: Current pattern
+ 682 | Failed    | NullPointerException     | Round 14, Guess 11: makeGuess result Map
+      java.lang.NullPointerException
+ 683 | Failed    | NullPointerException     | Round 14, Guess 11: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 684 | Failed    | Incorrect return value   | Round 14, Guess 11: Current pattern
+ 685 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 16
+ 686 | Passed    | Run time: 1 ms           | Round 15: Prep for round & Initial number of words
+ 687 | Passed    | Run time: 0 ms           | Round 15: Initial pattern
+ 688 | Passed    | Run time: 4 ms           | Round 15, Guess 0: makeGuess result Map
+ 689 | Passed    | Run time: 0 ms           | Round 15, Guess 0: Word count
+ 690 | Passed    | Run time: 0 ms           | Round 15, Guess 0: Current pattern
+ 691 | Passed    | Run time: 4 ms           | Round 15, Guess 1: makeGuess result Map
+ 692 | Passed    | Run time: 0 ms           | Round 15, Guess 1: Word count
+ 693 | Passed    | Run time: 0 ms           | Round 15, Guess 1: Current pattern
+ 694 | Passed    | Run time: 1 ms           | Round 15, Guess 2: makeGuess result Map
+ 695 | Passed    | Run time: 0 ms           | Round 15, Guess 2: Word count
+ 696 | Passed    | Run time: 0 ms           | Round 15, Guess 2: Current pattern
+ 697 | Passed    | Run time: 1 ms           | Round 15, Guess 3: makeGuess result Map
+ 698 | Passed    | Run time: 0 ms           | Round 15, Guess 3: Word count
+ 699 | Passed    | Run time: 0 ms           | Round 15, Guess 3: Current pattern
+ 700 | Passed    | Run time: 0 ms           | Round 15, Guess 4: makeGuess result Map
+ 701 | Passed    | Run time: 0 ms           | Round 15, Guess 4: Word count
+ 702 | Passed    | Run time: 1 ms           | Round 15, Guess 4: Current pattern
+ 703 | Passed    | Run time: 0 ms           | Round 15, Guess 5: makeGuess result Map
+ 704 | Passed    | Run time: 0 ms           | Round 15, Guess 5: Word count
+ 705 | Passed    | Run time: 0 ms           | Round 15, Guess 5: Current pattern
+ 706 | Passed    | Run time: 1 ms           | Round 15, Guess 6: makeGuess result Map
+ 707 | Passed    | Run time: 0 ms           | Round 15, Guess 6: Word count
+ 708 | Passed    | Run time: 0 ms           | Round 15, Guess 6: Current pattern
+ 709 | Passed    | Run time: 0 ms           | Round 15, Guess 7: makeGuess result Map
+ 710 | Passed    | Run time: 0 ms           | Round 15, Guess 7: Word count
+ 711 | Passed    | Run time: 0 ms           | Round 15, Guess 7: Current pattern
+ 712 | Passed    | Run time: 0 ms           | Round 15, Guess 8: makeGuess result Map
+ 713 | Passed    | Run time: 0 ms           | Round 15, Guess 8: Word count
+ 714 | Passed    | Run time: 0 ms           | Round 15, Guess 8: Current pattern
+ 715 | Passed    | Run time: 0 ms           | Round 15, Guess 9: makeGuess result Map
+ 716 | Passed    | Run time: 0 ms           | Round 15, Guess 9: Word count
+ 717 | Passed    | Run time: 0 ms           | Round 15, Guess 9: Current pattern
+ 718 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 17
+ 719 | Passed    | Run time: 1 ms           | Round 16: Prep for round & Initial number of words
+ 720 | Passed    | Run time: 0 ms           | Round 16: Initial pattern
+ 721 | Passed    | Run time: 0 ms           | Round 16, Guess 0: makeGuess result Map
+ 722 | Passed    | Run time: 0 ms           | Round 16, Guess 0: Word count
+ 723 | Passed    | Run time: 0 ms           | Round 16, Guess 0: Current pattern
+ 724 | Passed    | Run time: 1 ms           | Round 16, Guess 1: makeGuess result Map
+ 725 | Passed    | Run time: 0 ms           | Round 16, Guess 1: Word count
+ 726 | Passed    | Run time: 0 ms           | Round 16, Guess 1: Current pattern
+ 727 | Passed    | Run time: 0 ms           | Round 16, Guess 2: makeGuess result Map
+ 728 | Passed    | Run time: 0 ms           | Round 16, Guess 2: Word count
+ 729 | Passed    | Run time: 0 ms           | Round 16, Guess 2: Current pattern
+ 730 | Passed    | Run time: 1 ms           | Construct HangmanManager - Round 18
+ 731 | Passed    | Run time: 1 ms           | Round 17: Prep for round & Initial number of words
+ 732 | Passed    | Run time: 0 ms           | Round 17: Initial pattern
+ 733 | Passed    | Run time: 2 ms           | Round 17, Guess 0: makeGuess result Map
+ 734 | Passed    | Run time: 0 ms           | Round 17, Guess 0: Word count
+ 735 | Passed    | Run time: 0 ms           | Round 17, Guess 0: Current pattern
+ 736 | Passed    | Run time: 1 ms           | Round 17, Guess 1: makeGuess result Map
+ 737 | Passed    | Run time: 0 ms           | Round 17, Guess 1: Word count
+ 738 | Passed    | Run time: 0 ms           | Round 17, Guess 1: Current pattern
+ 739 | Passed    | Run time: 1 ms           | Round 17, Guess 2: makeGuess result Map
+ 740 | Passed    | Run time: 0 ms           | Round 17, Guess 2: Word count
+ 741 | Passed    | Run time: 0 ms           | Round 17, Guess 2: Current pattern
+ 742 | Passed    | Run time: 0 ms           | Round 17, Guess 3: makeGuess result Map
+ 743 | Passed    | Run time: 0 ms           | Round 17, Guess 3: Word count
+ 744 | Passed    | Run time: 0 ms           | Round 17, Guess 3: Current pattern
+ 745 | Passed    | Run time: 0 ms           | Round 17, Guess 4: makeGuess result Map
+ 746 | Passed    | Run time: 0 ms           | Round 17, Guess 4: Word count
+ 747 | Passed    | Run time: 0 ms           | Round 17, Guess 4: Current pattern
+ 748 | Passed    | Run time: 1 ms           | Round 17, Guess 5: makeGuess result Map
+ 749 | Passed    | Run time: 0 ms           | Round 17, Guess 5: Word count
+ 750 | Passed    | Run time: 0 ms           | Round 17, Guess 5: Current pattern
+ 751 | Passed    | Run time: 0 ms           | Round 17, Guess 6: makeGuess result Map
+ 752 | Passed    | Run time: 0 ms           | Round 17, Guess 6: Word count
+ 753 | Passed    | Run time: 0 ms           | Round 17, Guess 6: Current pattern
+ 754 | Passed    | Run time: 0 ms           | Round 17, Guess 7: makeGuess result Map
+ 755 | Passed    | Run time: 0 ms           | Round 17, Guess 7: Word count
+ 756 | Passed    | Run time: 0 ms           | Round 17, Guess 7: Current pattern
+ 757 | Passed    | Run time: 0 ms           | Round 17, Guess 8: makeGuess result Map
+ 758 | Passed    | Run time: 0 ms           | Round 17, Guess 8: Word count
+ 759 | Passed    | Run time: 0 ms           | Round 17, Guess 8: Current pattern
+ 760 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 19
+ 761 | Passed    | Run time: 1 ms           | Round 18: Prep for round & Initial number of words
+ 762 | Passed    | Run time: 0 ms           | Round 18: Initial pattern
+ 763 | Passed    | Run time: 2 ms           | Round 18, Guess 0: makeGuess result Map
+ 764 | Passed    | Run time: 0 ms           | Round 18, Guess 0: Word count
+ 765 | Passed    | Run time: 0 ms           | Round 18, Guess 0: Current pattern
+ 766 | Passed    | Run time: 2 ms           | Round 18, Guess 1: makeGuess result Map
+ 767 | Passed    | Run time: 0 ms           | Round 18, Guess 1: Word count
+ 768 | Passed    | Run time: 0 ms           | Round 18, Guess 1: Current pattern
+ 769 | Passed    | Run time: 2 ms           | Round 18, Guess 2: makeGuess result Map
+ 770 | Passed    | Run time: 0 ms           | Round 18, Guess 2: Word count
+ 771 | Passed    | Run time: 0 ms           | Round 18, Guess 2: Current pattern
+ 772 | Passed    | Run time: 1 ms           | Round 18, Guess 3: makeGuess result Map
+ 773 | Passed    | Run time: 0 ms           | Round 18, Guess 3: Word count
+ 774 | Passed    | Run time: 0 ms           | Round 18, Guess 3: Current pattern
+ 775 | Passed    | Run time: 0 ms           | Round 18, Guess 4: makeGuess result Map
+ 776 | Passed    | Run time: 0 ms           | Round 18, Guess 4: Word count
+ 777 | Passed    | Run time: 0 ms           | Round 18, Guess 4: Current pattern
+ 778 | Passed    | Run time: 0 ms           | Round 18, Guess 5: makeGuess result Map
+ 779 | Passed    | Run time: 0 ms           | Round 18, Guess 5: Word count
+ 780 | Passed    | Run time: 0 ms           | Round 18, Guess 5: Current pattern
+ 781 | Passed    | Run time: 0 ms           | Round 18, Guess 6: makeGuess result Map
+ 782 | Passed    | Run time: 0 ms           | Round 18, Guess 6: Word count
+ 783 | Passed    | Run time: 0 ms           | Round 18, Guess 6: Current pattern
+ 784 | Passed    | Run time: 0 ms           | Round 18, Guess 7: makeGuess result Map
+ 785 | Passed    | Run time: 0 ms           | Round 18, Guess 7: Word count
+ 786 | Passed    | Run time: 0 ms           | Round 18, Guess 7: Current pattern
+ 787 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 20
+ 788 | Passed    | Run time: 1 ms           | Round 19: Prep for round & Initial number of words
+ 789 | Passed    | Run time: 0 ms           | Round 19: Initial pattern
+ 790 | Passed    | Run time: 1 ms           | Round 19, Guess 0: makeGuess result Map
+ 791 | Passed    | Run time: 0 ms           | Round 19, Guess 0: Word count
+ 792 | Passed    | Run time: 1 ms           | Round 19, Guess 0: Current pattern
+ 793 | Passed    | Run time: 1 ms           | Round 19, Guess 1: makeGuess result Map
+ 794 | Passed    | Run time: 0 ms           | Round 19, Guess 1: Word count
+ 795 | Passed    | Run time: 0 ms           | Round 19, Guess 1: Current pattern
+ 796 | Passed    | Run time: 0 ms           | Round 19, Guess 2: makeGuess result Map
+ 797 | Passed    | Run time: 0 ms           | Round 19, Guess 2: Word count
+ 798 | Passed    | Run time: 0 ms           | Round 19, Guess 2: Current pattern
+ 799 | Passed    | Run time: 0 ms           | Round 19, Guess 3: makeGuess result Map
+ 800 | Passed    | Run time: 0 ms           | Round 19, Guess 3: Word count
+ 801 | Passed    | Run time: 0 ms           | Round 19, Guess 3: Current pattern
+ 802 | Passed    | Run time: 0 ms           | Round 19, Guess 4: makeGuess result Map
+ 803 | Passed    | Run time: 0 ms           | Round 19, Guess 4: Word count
+ 804 | Passed    | Run time: 0 ms           | Round 19, Guess 4: Current pattern
+ 805 | Passed    | Run time: 0 ms           | Round 19, Guess 5: makeGuess result Map
+ 806 | Passed    | Run time: 0 ms           | Round 19, Guess 5: Word count
+ 807 | Passed    | Run time: 0 ms           | Round 19, Guess 5: Current pattern
+ 808 | Passed    | Run time: 0 ms           | Round 19, Guess 6: makeGuess result Map
+ 809 | Passed    | Run time: 0 ms           | Round 19, Guess 6: Word count
+ 810 | Passed    | Run time: 0 ms           | Round 19, Guess 6: Current pattern
+ 811 | Passed    | Run time: 0 ms           | Round 19, Guess 7: makeGuess result Map
+ 812 | Failed    | NullPointerException     | Round 19, Guess 7: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 813 | Failed    | Incorrect return value   | Round 19, Guess 7: Current pattern
+ 814 | Failed    | NullPointerException     | Round 19, Guess 8: makeGuess result Map
+      java.lang.NullPointerException
+ 815 | Failed    | NullPointerException     | Round 19, Guess 8: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 816 | Failed    | Incorrect return value   | Round 19, Guess 8: Current pattern
+ 817 | Failed    | NullPointerException     | Round 19, Guess 9: makeGuess result Map
+      java.lang.NullPointerException
+ 818 | Failed    | NullPointerException     | Round 19, Guess 9: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 819 | Failed    | Incorrect return value   | Round 19, Guess 9: Current pattern
+ 820 | Failed    | NullPointerException     | Round 19, Guess 10: makeGuess result Map
+      java.lang.NullPointerException
+ 821 | Failed    | NullPointerException     | Round 19, Guess 10: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 822 | Failed    | Incorrect return value   | Round 19, Guess 10: Current pattern
+ 823 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 21
+ 824 | Passed    | Run time: 1 ms           | Round 20: Prep for round & Initial number of words
+ 825 | Passed    | Run time: 0 ms           | Round 20: Initial pattern
+ 826 | Passed    | Run time: 0 ms           | Round 20, Guess 0: makeGuess result Map
+ 827 | Passed    | Run time: 0 ms           | Round 20, Guess 0: Word count
+ 828 | Passed    | Run time: 0 ms           | Round 20, Guess 0: Current pattern
+ 829 | Passed    | Run time: 1 ms           | Round 20, Guess 1: makeGuess result Map
+ 830 | Passed    | Run time: 0 ms           | Round 20, Guess 1: Word count
+ 831 | Passed    | Run time: 0 ms           | Round 20, Guess 1: Current pattern
+ 832 | Passed    | Run time: 0 ms           | Round 20, Guess 2: makeGuess result Map
+ 833 | Passed    | Run time: 0 ms           | Round 20, Guess 2: Word count
+ 834 | Passed    | Run time: 0 ms           | Round 20, Guess 2: Current pattern
+ 835 | Passed    | Run time: 1 ms           | Round 20, Guess 3: makeGuess result Map
+ 836 | Passed    | Run time: 0 ms           | Round 20, Guess 3: Word count
+ 837 | Passed    | Run time: 0 ms           | Round 20, Guess 3: Current pattern
+ 838 | Passed    | Run time: 0 ms           | Round 20, Guess 4: makeGuess result Map
+ 839 | Passed    | Run time: 0 ms           | Round 20, Guess 4: Word count
+ 840 | Passed    | Run time: 0 ms           | Round 20, Guess 4: Current pattern
+ 841 | Passed    | Run time: 0 ms           | Round 20, Guess 5: makeGuess result Map
+ 842 | Passed    | Run time: 0 ms           | Round 20, Guess 5: Word count
+ 843 | Passed    | Run time: 0 ms           | Round 20, Guess 5: Current pattern
+ 844 | Passed    | Run time: 0 ms           | Round 20, Guess 6: makeGuess result Map
+ 845 | Passed    | Run time: 0 ms           | Round 20, Guess 6: Word count
+ 846 | Passed    | Run time: 0 ms           | Round 20, Guess 6: Current pattern
+ 847 | Passed    | Run time: 0 ms           | Round 20, Guess 7: makeGuess result Map
+ 848 | Failed    | NullPointerException     | Round 20, Guess 7: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 849 | Failed    | Incorrect return value   | Round 20, Guess 7: Current pattern
+ 850 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 22
+ 851 | Passed    | Run time: 2 ms           | Round 21: Prep for round & Initial number of words
+ 852 | Passed    | Run time: 0 ms           | Round 21: Initial pattern
+ 853 | Passed    | Run time: 4 ms           | Round 21, Guess 0: makeGuess result Map
+ 854 | Passed    | Run time: 0 ms           | Round 21, Guess 0: Word count
+ 855 | Passed    | Run time: 0 ms           | Round 21, Guess 0: Current pattern
+ 856 | Passed    | Run time: 3 ms           | Round 21, Guess 1: makeGuess result Map
+ 857 | Passed    | Run time: 0 ms           | Round 21, Guess 1: Word count
+ 858 | Passed    | Run time: 0 ms           | Round 21, Guess 1: Current pattern
+ 859 | Passed    | Run time: 2 ms           | Round 21, Guess 2: makeGuess result Map
+ 860 | Passed    | Run time: 0 ms           | Round 21, Guess 2: Word count
+ 861 | Passed    | Run time: 0 ms           | Round 21, Guess 2: Current pattern
+ 862 | Passed    | Run time: 0 ms           | Round 21, Guess 3: makeGuess result Map
+ 863 | Passed    | Run time: 0 ms           | Round 21, Guess 3: Word count
+ 864 | Passed    | Run time: 0 ms           | Round 21, Guess 3: Current pattern
+ 865 | Passed    | Run time: 0 ms           | Round 21, Guess 4: makeGuess result Map
+ 866 | Passed    | Run time: 0 ms           | Round 21, Guess 4: Word count
+ 867 | Passed    | Run time: 0 ms           | Round 21, Guess 4: Current pattern
+ 868 | Passed    | Run time: 1 ms           | Round 21, Guess 5: makeGuess result Map
+ 869 | Passed    | Run time: 0 ms           | Round 21, Guess 5: Word count
+ 870 | Passed    | Run time: 0 ms           | Round 21, Guess 5: Current pattern
+ 871 | Passed    | Run time: 0 ms           | Round 21, Guess 6: makeGuess result Map
+ 872 | Passed    | Run time: 0 ms           | Round 21, Guess 6: Word count
+ 873 | Passed    | Run time: 0 ms           | Round 21, Guess 6: Current pattern
+ 874 | Passed    | Run time: 1 ms           | Round 21, Guess 7: makeGuess result Map
+ 875 | Passed    | Run time: 0 ms           | Round 21, Guess 7: Word count
+ 876 | Passed    | Run time: 0 ms           | Round 21, Guess 7: Current pattern
+ 877 | Passed    | Run time: 0 ms           | Round 21, Guess 8: makeGuess result Map
+ 878 | Passed    | Run time: 0 ms           | Round 21, Guess 8: Word count
+ 879 | Passed    | Run time: 0 ms           | Round 21, Guess 8: Current pattern
+ 880 | Passed    | Run time: 0 ms           | Round 21, Guess 9: makeGuess result Map
+ 881 | Passed    | Run time: 0 ms           | Round 21, Guess 9: Word count
+ 882 | Passed    | Run time: 0 ms           | Round 21, Guess 9: Current pattern
+ 883 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 23
+ 884 | Passed    | Run time: 1 ms           | Round 22: Prep for round & Initial number of words
+ 885 | Passed    | Run time: 0 ms           | Round 22: Initial pattern
+ 886 | Passed    | Run time: 3 ms           | Round 22, Guess 0: makeGuess result Map
+ 887 | Passed    | Run time: 0 ms           | Round 22, Guess 0: Word count
+ 888 | Passed    | Run time: 0 ms           | Round 22, Guess 0: Current pattern
+ 889 | Passed    | Run time: 2 ms           | Round 22, Guess 1: makeGuess result Map
+ 890 | Passed    | Run time: 0 ms           | Round 22, Guess 1: Word count
+ 891 | Passed    | Run time: 0 ms           | Round 22, Guess 1: Current pattern
+ 892 | Passed    | Run time: 2 ms           | Round 22, Guess 2: makeGuess result Map
+ 893 | Passed    | Run time: 0 ms           | Round 22, Guess 2: Word count
+ 894 | Passed    | Run time: 0 ms           | Round 22, Guess 2: Current pattern
+ 895 | Passed    | Run time: 3 ms           | Round 22, Guess 3: makeGuess result Map
+ 896 | Passed    | Run time: 0 ms           | Round 22, Guess 3: Word count
+ 897 | Passed    | Run time: 0 ms           | Round 22, Guess 3: Current pattern
+ 898 | Passed    | Run time: 2 ms           | Round 22, Guess 4: makeGuess result Map
+ 899 | Passed    | Run time: 0 ms           | Round 22, Guess 4: Word count
+ 900 | Passed    | Run time: 0 ms           | Round 22, Guess 4: Current pattern
+ 901 | Passed    | Run time: 2 ms           | Round 22, Guess 5: makeGuess result Map
+ 902 | Passed    | Run time: 0 ms           | Round 22, Guess 5: Word count
+ 903 | Passed    | Run time: 0 ms           | Round 22, Guess 5: Current pattern
+ 904 | Passed    | Run time: 1 ms           | Round 22, Guess 6: makeGuess result Map
+ 905 | Passed    | Run time: 0 ms           | Round 22, Guess 6: Word count
+ 906 | Passed    | Run time: 0 ms           | Round 22, Guess 6: Current pattern
+ 907 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 24
+ 908 | Passed    | Run time: 2 ms           | Round 23: Prep for round & Initial number of words
+ 909 | Passed    | Run time: 0 ms           | Round 23: Initial pattern
+ 910 | Passed    | Run time: 5 ms           | Round 23, Guess 0: makeGuess result Map
+ 911 | Passed    | Run time: 0 ms           | Round 23, Guess 0: Word count
+ 912 | Passed    | Run time: 0 ms           | Round 23, Guess 0: Current pattern
+ 913 | Passed    | Run time: 4 ms           | Round 23, Guess 1: makeGuess result Map
+ 914 | Passed    | Run time: 0 ms           | Round 23, Guess 1: Word count
+ 915 | Passed    | Run time: 0 ms           | Round 23, Guess 1: Current pattern
+ 916 | Passed    | Run time: 1 ms           | Round 23, Guess 2: makeGuess result Map
+ 917 | Passed    | Run time: 0 ms           | Round 23, Guess 2: Word count
+ 918 | Passed    | Run time: 0 ms           | Round 23, Guess 2: Current pattern
+ 919 | Passed    | Run time: 0 ms           | Round 23, Guess 3: makeGuess result Map
+ 920 | Passed    | Run time: 0 ms           | Round 23, Guess 3: Word count
+ 921 | Passed    | Run time: 0 ms           | Round 23, Guess 3: Current pattern
+ 922 | Passed    | Run time: 0 ms           | Round 23, Guess 4: makeGuess result Map
+ 923 | Passed    | Run time: 0 ms           | Round 23, Guess 4: Word count
+ 924 | Passed    | Run time: 0 ms           | Round 23, Guess 4: Current pattern
+ 925 | Passed    | Run time: 0 ms           | Round 23, Guess 5: makeGuess result Map
+ 926 | Passed    | Run time: 0 ms           | Round 23, Guess 5: Word count
+ 927 | Passed    | Run time: 0 ms           | Round 23, Guess 5: Current pattern
+ 928 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 25
+ 929 | Passed    | Run time: 1 ms           | Round 24: Prep for round & Initial number of words
+ 930 | Passed    | Run time: 0 ms           | Round 24: Initial pattern
+ 931 | Passed    | Run time: 1 ms           | Round 24, Guess 0: makeGuess result Map
+ 932 | Passed    | Run time: 0 ms           | Round 24, Guess 0: Word count
+ 933 | Passed    | Run time: 0 ms           | Round 24, Guess 0: Current pattern
+ 934 | Passed    | Run time: 0 ms           | Round 24, Guess 1: makeGuess result Map
+ 935 | Passed    | Run time: 0 ms           | Round 24, Guess 1: Word count
+ 936 | Passed    | Run time: 0 ms           | Round 24, Guess 1: Current pattern
+ 937 | Passed    | Run time: 0 ms           | Round 24, Guess 2: makeGuess result Map
+ 938 | Passed    | Run time: 0 ms           | Round 24, Guess 2: Word count
+ 939 | Passed    | Run time: 0 ms           | Round 24, Guess 2: Current pattern
+ 940 | Passed    | Run time: 0 ms           | Round 24, Guess 3: makeGuess result Map
+ 941 | Passed    | Run time: 0 ms           | Round 24, Guess 3: Word count
+ 942 | Passed    | Run time: 0 ms           | Round 24, Guess 3: Current pattern
+ 943 | Passed    | Run time: 0 ms           | Round 24, Guess 4: makeGuess result Map
+ 944 | Passed    | Run time: 0 ms           | Round 24, Guess 4: Word count
+ 945 | Passed    | Run time: 0 ms           | Round 24, Guess 4: Current pattern
+ 946 | Passed    | Run time: 1 ms           | Round 24, Guess 5: makeGuess result Map
+ 947 | Passed    | Run time: 0 ms           | Round 24, Guess 5: Word count
+ 948 | Passed    | Run time: 0 ms           | Round 24, Guess 5: Current pattern
+ 949 | Passed    | Run time: 0 ms           | Round 24, Guess 6: makeGuess result Map
+ 950 | Passed    | Run time: 0 ms           | Round 24, Guess 6: Word count
+ 951 | Passed    | Run time: 0 ms           | Round 24, Guess 6: Current pattern
+ 952 | Passed    | Run time: 0 ms           | Round 24, Guess 7: makeGuess result Map
+ 953 | Passed    | Run time: 0 ms           | Round 24, Guess 7: Word count
+ 954 | Passed    | Run time: 0 ms           | Round 24, Guess 7: Current pattern
+ 955 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 26
+ 956 | Passed    | Run time: 1 ms           | Round 25: Prep for round & Initial number of words
+ 957 | Passed    | Run time: 0 ms           | Round 25: Initial pattern
+ 958 | Passed    | Run time: 3 ms           | Round 25, Guess 0: makeGuess result Map
+ 959 | Passed    | Run time: 0 ms           | Round 25, Guess 0: Word count
+ 960 | Passed    | Run time: 0 ms           | Round 25, Guess 0: Current pattern
+ 961 | Passed    | Run time: 2 ms           | Round 25, Guess 1: makeGuess result Map
+ 962 | Passed    | Run time: 0 ms           | Round 25, Guess 1: Word count
+ 963 | Passed    | Run time: 0 ms           | Round 25, Guess 1: Current pattern
+ 964 | Passed    | Run time: 2 ms           | Round 25, Guess 2: makeGuess result Map
+ 965 | Passed    | Run time: 0 ms           | Round 25, Guess 2: Word count
+ 966 | Passed    | Run time: 0 ms           | Round 25, Guess 2: Current pattern
+ 967 | Passed    | Run time: 1 ms           | Round 25, Guess 3: makeGuess result Map
+ 968 | Passed    | Run time: 0 ms           | Round 25, Guess 3: Word count
+ 969 | Passed    | Run time: 0 ms           | Round 25, Guess 3: Current pattern
+ 970 | Passed    | Run time: 0 ms           | Round 25, Guess 4: makeGuess result Map
+ 971 | Passed    | Run time: 0 ms           | Round 25, Guess 4: Word count
+ 972 | Passed    | Run time: 0 ms           | Round 25, Guess 4: Current pattern
+ 973 | Passed    | Run time: 0 ms           | Round 25, Guess 5: makeGuess result Map
+ 974 | Passed    | Run time: 0 ms           | Round 25, Guess 5: Word count
+ 975 | Passed    | Run time: 0 ms           | Round 25, Guess 5: Current pattern
+ 976 | Passed    | Run time: 0 ms           | Round 25, Guess 6: makeGuess result Map
+ 977 | Passed    | Run time: 0 ms           | Round 25, Guess 6: Word count
+ 978 | Passed    | Run time: 0 ms           | Round 25, Guess 6: Current pattern
+ 979 | Passed    | Run time: 0 ms           | Round 25, Guess 7: makeGuess result Map
+ 980 | Failed    | NullPointerException     | Round 25, Guess 7: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 981 | Failed    | Incorrect return value   | Round 25, Guess 7: Current pattern
+ 982 | Failed    | NullPointerException     | Round 25, Guess 8: makeGuess result Map
+      java.lang.NullPointerException
+ 983 | Failed    | NullPointerException     | Round 25, Guess 8: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+ 984 | Failed    | Incorrect return value   | Round 25, Guess 8: Current pattern
+ 985 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 27
+ 986 | Passed    | Run time: 1 ms           | Round 26: Prep for round & Initial number of words
+ 987 | Passed    | Run time: 1 ms           | Round 26: Initial pattern
+ 988 | Passed    | Run time: 2 ms           | Round 26, Guess 0: makeGuess result Map
+ 989 | Passed    | Run time: 0 ms           | Round 26, Guess 0: Word count
+ 990 | Passed    | Run time: 0 ms           | Round 26, Guess 0: Current pattern
+ 991 | Passed    | Run time: 0 ms           | Round 26, Guess 1: makeGuess result Map
+ 992 | Passed    | Run time: 0 ms           | Round 26, Guess 1: Word count
+ 993 | Passed    | Run time: 0 ms           | Round 26, Guess 1: Current pattern
+ 994 | Passed    | Run time: 0 ms           | Round 26, Guess 2: makeGuess result Map
+ 995 | Passed    | Run time: 0 ms           | Round 26, Guess 2: Word count
+ 996 | Passed    | Run time: 0 ms           | Round 26, Guess 2: Current pattern
+ 997 | Passed    | Run time: 1 ms           | Round 26, Guess 3: makeGuess result Map
+ 998 | Passed    | Run time: 0 ms           | Round 26, Guess 3: Word count
+ 999 | Passed    | Run time: 1 ms           | Round 26, Guess 3: Current pattern
+1000 | Passed    | Run time: 0 ms           | Round 26, Guess 4: makeGuess result Map
+1001 | Passed    | Run time: 0 ms           | Round 26, Guess 4: Word count
+1002 | Passed    | Run time: 0 ms           | Round 26, Guess 4: Current pattern
+1003 | Passed    | Run time: 0 ms           | Round 26, Guess 5: makeGuess result Map
+1004 | Passed    | Run time: 0 ms           | Round 26, Guess 5: Word count
+1005 | Passed    | Run time: 0 ms           | Round 26, Guess 5: Current pattern
+1006 | Passed    | Run time: 0 ms           | Round 26, Guess 6: makeGuess result Map
+1007 | Passed    | Run time: 0 ms           | Round 26, Guess 6: Word count
+1008 | Passed    | Run time: 0 ms           | Round 26, Guess 6: Current pattern
+1009 | Passed    | Run time: 0 ms           | Round 26, Guess 7: makeGuess result Map
+1010 | Failed    | NullPointerException     | Round 26, Guess 7: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1011 | Failed    | Incorrect return value   | Round 26, Guess 7: Current pattern
+1012 | Failed    | NullPointerException     | Round 26, Guess 8: makeGuess result Map
+      java.lang.NullPointerException
+1013 | Failed    | NullPointerException     | Round 26, Guess 8: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1014 | Failed    | Incorrect return value   | Round 26, Guess 8: Current pattern
+1015 | Failed    | NullPointerException     | Round 26, Guess 9: makeGuess result Map
+      java.lang.NullPointerException
+1016 | Failed    | NullPointerException     | Round 26, Guess 9: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1017 | Failed    | Incorrect return value   | Round 26, Guess 9: Current pattern
+1018 | Failed    | NullPointerException     | Round 26, Guess 10: makeGuess result Map
+      java.lang.NullPointerException
+1019 | Failed    | NullPointerException     | Round 26, Guess 10: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1020 | Failed    | Incorrect return value   | Round 26, Guess 10: Current pattern
+1021 | Failed    | NullPointerException     | Round 26, Guess 11: makeGuess result Map
+      java.lang.NullPointerException
+1022 | Failed    | NullPointerException     | Round 26, Guess 11: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1023 | Failed    | Incorrect return value   | Round 26, Guess 11: Current pattern
+1024 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 28
+1025 | Passed    | Run time: 1 ms           | Round 27: Prep for round & Initial number of words
+1026 | Passed    | Run time: 0 ms           | Round 27: Initial pattern
+1027 | Passed    | Run time: 5 ms           | Round 27, Guess 0: makeGuess result Map
+1028 | Passed    | Run time: 0 ms           | Round 27, Guess 0: Word count
+1029 | Passed    | Run time: 0 ms           | Round 27, Guess 0: Current pattern
+1030 | Passed    | Run time: 4 ms           | Round 27, Guess 1: makeGuess result Map
+1031 | Passed    | Run time: 0 ms           | Round 27, Guess 1: Word count
+1032 | Passed    | Run time: 0 ms           | Round 27, Guess 1: Current pattern
+1033 | Passed    | Run time: 4 ms           | Round 27, Guess 2: makeGuess result Map
+1034 | Passed    | Run time: 0 ms           | Round 27, Guess 2: Word count
+1035 | Passed    | Run time: 0 ms           | Round 27, Guess 2: Current pattern
+1036 | Passed    | Run time: 2 ms           | Round 27, Guess 3: makeGuess result Map
+1037 | Passed    | Run time: 0 ms           | Round 27, Guess 3: Word count
+1038 | Passed    | Run time: 0 ms           | Round 27, Guess 3: Current pattern
+1039 | Passed    | Run time: 0 ms           | Round 27, Guess 4: makeGuess result Map
+1040 | Passed    | Run time: 0 ms           | Round 27, Guess 4: Word count
+1041 | Passed    | Run time: 0 ms           | Round 27, Guess 4: Current pattern
+1042 | Passed    | Run time: 0 ms           | Round 27, Guess 5: makeGuess result Map
+1043 | Passed    | Run time: 0 ms           | Round 27, Guess 5: Word count
+1044 | Passed    | Run time: 0 ms           | Round 27, Guess 5: Current pattern
+1045 | Passed    | Run time: 0 ms           | Round 27, Guess 6: makeGuess result Map
+1046 | Passed    | Run time: 0 ms           | Round 27, Guess 6: Word count
+1047 | Passed    | Run time: 0 ms           | Round 27, Guess 6: Current pattern
+1048 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 29
+1049 | Passed    | Run time: 1 ms           | Round 28: Prep for round & Initial number of words
+1050 | Passed    | Run time: 0 ms           | Round 28: Initial pattern
+1051 | Passed    | Run time: 1 ms           | Round 28, Guess 0: makeGuess result Map
+1052 | Passed    | Run time: 0 ms           | Round 28, Guess 0: Word count
+1053 | Passed    | Run time: 0 ms           | Round 28, Guess 0: Current pattern
+1054 | Passed    | Run time: 1 ms           | Round 28, Guess 1: makeGuess result Map
+1055 | Passed    | Run time: 0 ms           | Round 28, Guess 1: Word count
+1056 | Passed    | Run time: 0 ms           | Round 28, Guess 1: Current pattern
+1057 | Passed    | Run time: 1 ms           | Round 28, Guess 2: makeGuess result Map
+1058 | Passed    | Run time: 0 ms           | Round 28, Guess 2: Word count
+1059 | Passed    | Run time: 0 ms           | Round 28, Guess 2: Current pattern
+1060 | Passed    | Run time: 1 ms           | Round 28, Guess 3: makeGuess result Map
+1061 | Passed    | Run time: 0 ms           | Round 28, Guess 3: Word count
+1062 | Passed    | Run time: 0 ms           | Round 28, Guess 3: Current pattern
+1063 | Passed    | Run time: 0 ms           | Round 28, Guess 4: makeGuess result Map
+1064 | Passed    | Run time: 0 ms           | Round 28, Guess 4: Word count
+1065 | Passed    | Run time: 0 ms           | Round 28, Guess 4: Current pattern
+1066 | Passed    | Run time: 0 ms           | Round 28, Guess 5: makeGuess result Map
+1067 | Passed    | Run time: 0 ms           | Round 28, Guess 5: Word count
+1068 | Passed    | Run time: 0 ms           | Round 28, Guess 5: Current pattern
+1069 | Passed    | Run time: 0 ms           | Round 28, Guess 6: makeGuess result Map
+1070 | Passed    | Run time: 0 ms           | Round 28, Guess 6: Word count
+1071 | Passed    | Run time: 0 ms           | Round 28, Guess 6: Current pattern
+1072 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 30
+1073 | Passed    | Run time: 2 ms           | Round 29: Prep for round & Initial number of words
+1074 | Passed    | Run time: 0 ms           | Round 29: Initial pattern
+1075 | Passed    | Run time: 6 ms           | Round 29, Guess 0: makeGuess result Map
+1076 | Passed    | Run time: 0 ms           | Round 29, Guess 0: Word count
+1077 | Passed    | Run time: 0 ms           | Round 29, Guess 0: Current pattern
+1078 | Passed    | Run time: 3 ms           | Round 29, Guess 1: makeGuess result Map
+1079 | Passed    | Run time: 0 ms           | Round 29, Guess 1: Word count
+1080 | Passed    | Run time: 0 ms           | Round 29, Guess 1: Current pattern
+1081 | Passed    | Run time: 3 ms           | Round 29, Guess 2: makeGuess result Map
+1082 | Passed    | Run time: 0 ms           | Round 29, Guess 2: Word count
+1083 | Passed    | Run time: 0 ms           | Round 29, Guess 2: Current pattern
+1084 | Passed    | Run time: 3 ms           | Round 29, Guess 3: makeGuess result Map
+1085 | Passed    | Run time: 0 ms           | Round 29, Guess 3: Word count
+1086 | Passed    | Run time: 0 ms           | Round 29, Guess 3: Current pattern
+1087 | Passed    | Run time: 1 ms           | Round 29, Guess 4: makeGuess result Map
+1088 | Passed    | Run time: 0 ms           | Round 29, Guess 4: Word count
+1089 | Passed    | Run time: 0 ms           | Round 29, Guess 4: Current pattern
+1090 | Passed    | Run time: 0 ms           | Round 29, Guess 5: makeGuess result Map
+1091 | Passed    | Run time: 0 ms           | Round 29, Guess 5: Word count
+1092 | Passed    | Run time: 0 ms           | Round 29, Guess 5: Current pattern
+1093 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 31
+1094 | Passed    | Run time: 1 ms           | Round 30: Prep for round & Initial number of words
+1095 | Passed    | Run time: 0 ms           | Round 30: Initial pattern
+1096 | Passed    | Run time: 5 ms           | Round 30, Guess 0: makeGuess result Map
+1097 | Passed    | Run time: 0 ms           | Round 30, Guess 0: Word count
+1098 | Passed    | Run time: 0 ms           | Round 30, Guess 0: Current pattern
+1099 | Passed    | Run time: 6 ms           | Round 30, Guess 1: makeGuess result Map
+1100 | Passed    | Run time: 0 ms           | Round 30, Guess 1: Word count
+1101 | Passed    | Run time: 0 ms           | Round 30, Guess 1: Current pattern
+1102 | Passed    | Run time: 1 ms           | Round 30, Guess 2: makeGuess result Map
+1103 | Passed    | Run time: 0 ms           | Round 30, Guess 2: Word count
+1104 | Passed    | Run time: 0 ms           | Round 30, Guess 2: Current pattern
+1105 | Passed    | Run time: 1 ms           | Round 30, Guess 3: makeGuess result Map
+1106 | Passed    | Run time: 0 ms           | Round 30, Guess 3: Word count
+1107 | Passed    | Run time: 0 ms           | Round 30, Guess 3: Current pattern
+1108 | Passed    | Run time: 0 ms           | Round 30, Guess 4: makeGuess result Map
+1109 | Passed    | Run time: 0 ms           | Round 30, Guess 4: Word count
+1110 | Passed    | Run time: 0 ms           | Round 30, Guess 4: Current pattern
+1111 | Passed    | Run time: 0 ms           | Round 30, Guess 5: makeGuess result Map
+1112 | Passed    | Run time: 0 ms           | Round 30, Guess 5: Word count
+1113 | Passed    | Run time: 0 ms           | Round 30, Guess 5: Current pattern
+1114 | Passed    | Run time: 0 ms           | Round 30, Guess 6: makeGuess result Map
+1115 | Passed    | Run time: 0 ms           | Round 30, Guess 6: Word count
+1116 | Passed    | Run time: 0 ms           | Round 30, Guess 6: Current pattern
+1117 | Passed    | Run time: 0 ms           | Round 30, Guess 7: makeGuess result Map
+1118 | Passed    | Run time: 0 ms           | Round 30, Guess 7: Word count
+1119 | Passed    | Run time: 0 ms           | Round 30, Guess 7: Current pattern
+1120 | Passed    | Run time: 0 ms           | Round 30, Guess 8: makeGuess result Map
+1121 | Passed    | Run time: 0 ms           | Round 30, Guess 8: Word count
+1122 | Passed    | Run time: 0 ms           | Round 30, Guess 8: Current pattern
+1123 | Passed    | Run time: 0 ms           | Round 30, Guess 9: makeGuess result Map
+1124 | Passed    | Run time: 0 ms           | Round 30, Guess 9: Word count
+1125 | Passed    | Run time: 0 ms           | Round 30, Guess 9: Current pattern
+1126 | Passed    | Run time: 0 ms           | Round 30, Guess 10: makeGuess result Map
+1127 | Passed    | Run time: 0 ms           | Round 30, Guess 10: Word count
+1128 | Passed    | Run time: 0 ms           | Round 30, Guess 10: Current pattern
+1129 | Passed    | Run time: 0 ms           | Round 30, Guess 11: makeGuess result Map
+1130 | Passed    | Run time: 0 ms           | Round 30, Guess 11: Word count
+1131 | Passed    | Run time: 0 ms           | Round 30, Guess 11: Current pattern
+1132 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 32
+1133 | Passed    | Run time: 1 ms           | Round 31: Prep for round & Initial number of words
+1134 | Passed    | Run time: 0 ms           | Round 31: Initial pattern
+1135 | Passed    | Run time: 3 ms           | Round 31, Guess 0: makeGuess result Map
+1136 | Passed    | Run time: 0 ms           | Round 31, Guess 0: Word count
+1137 | Passed    | Run time: 0 ms           | Round 31, Guess 0: Current pattern
+1138 | Passed    | Run time: 1 ms           | Round 31, Guess 1: makeGuess result Map
+1139 | Passed    | Run time: 0 ms           | Round 31, Guess 1: Word count
+1140 | Passed    | Run time: 0 ms           | Round 31, Guess 1: Current pattern
+1141 | Passed    | Run time: 1 ms           | Round 31, Guess 2: makeGuess result Map
+1142 | Passed    | Run time: 0 ms           | Round 31, Guess 2: Word count
+1143 | Passed    | Run time: 0 ms           | Round 31, Guess 2: Current pattern
+1144 | Passed    | Run time: 0 ms           | Round 31, Guess 3: makeGuess result Map
+1145 | Passed    | Run time: 0 ms           | Round 31, Guess 3: Word count
+1146 | Passed    | Run time: 0 ms           | Round 31, Guess 3: Current pattern
+1147 | Passed    | Run time: 0 ms           | Round 31, Guess 4: makeGuess result Map
+1148 | Passed    | Run time: 0 ms           | Round 31, Guess 4: Word count
+1149 | Passed    | Run time: 0 ms           | Round 31, Guess 4: Current pattern
+1150 | Passed    | Run time: 2 ms           | Construct HangmanManager - Round 33
+1151 | Passed    | Run time: 2 ms           | Round 32: Prep for round & Initial number of words
+1152 | Passed    | Run time: 0 ms           | Round 32: Initial pattern
+1153 | Passed    | Run time: 1 ms           | Round 32, Guess 0: makeGuess result Map
+1154 | Passed    | Run time: 0 ms           | Round 32, Guess 0: Word count
+1155 | Passed    | Run time: 0 ms           | Round 32, Guess 0: Current pattern
+1156 | Passed    | Run time: 1 ms           | Round 32, Guess 1: makeGuess result Map
+1157 | Passed    | Run time: 0 ms           | Round 32, Guess 1: Word count
+1158 | Passed    | Run time: 0 ms           | Round 32, Guess 1: Current pattern
+1159 | Passed    | Run time: 1 ms           | Round 32, Guess 2: makeGuess result Map
+1160 | Passed    | Run time: 0 ms           | Round 32, Guess 2: Word count
+1161 | Passed    | Run time: 0 ms           | Round 32, Guess 2: Current pattern
+1162 | Passed    | Run time: 0 ms           | Round 32, Guess 3: makeGuess result Map
+1163 | Failed    | Incorrect return value   | Round 32, Guess 3: Word count
+1164 | Failed    | Incorrect return value   | Round 32, Guess 3: Current pattern
+1165 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 1
+1166 | Passed    | Run time: 1 ms           | Round 1: Prep for round & Initial number of words
+1167 | Passed    | Run time: 0 ms           | Round 1: Initial pattern
+1168 | Passed    | Run time: 3 ms           | Round 1, Guess 0: makeGuess result Map
+1169 | Passed    | Run time: 0 ms           | Round 1, Guess 0: Word count
+1170 | Passed    | Run time: 0 ms           | Round 1, Guess 0: Current pattern
+1171 | Passed    | Run time: 2 ms           | Round 1, Guess 1: makeGuess result Map
+1172 | Passed    | Run time: 0 ms           | Round 1, Guess 1: Word count
+1173 | Passed    | Run time: 0 ms           | Round 1, Guess 1: Current pattern
+1174 | Passed    | Run time: 1 ms           | Round 1, Guess 2: makeGuess result Map
+1175 | Passed    | Run time: 0 ms           | Round 1, Guess 2: Word count
+1176 | Passed    | Run time: 0 ms           | Round 1, Guess 2: Current pattern
+1177 | Passed    | Run time: 1 ms           | Round 1, Guess 3: makeGuess result Map
+1178 | Passed    | Run time: 0 ms           | Round 1, Guess 3: Word count
+1179 | Passed    | Run time: 0 ms           | Round 1, Guess 3: Current pattern
+1180 | Passed    | Run time: 0 ms           | Round 1, Guess 4: makeGuess result Map
+1181 | Passed    | Run time: 0 ms           | Round 1, Guess 4: Word count
+1182 | Passed    | Run time: 0 ms           | Round 1, Guess 4: Current pattern
+1183 | Passed    | Run time: 0 ms           | Round 1, Guess 5: makeGuess result Map
+1184 | Passed    | Run time: 0 ms           | Round 1, Guess 5: Word count
+1185 | Passed    | Run time: 0 ms           | Round 1, Guess 5: Current pattern
+1186 | Passed    | Run time: 0 ms           | Round 1, Guess 6: makeGuess result Map
+1187 | Passed    | Run time: 0 ms           | Round 1, Guess 6: Word count
+1188 | Passed    | Run time: 0 ms           | Round 1, Guess 6: Current pattern
+1189 | Passed    | Run time: 0 ms           | Round 1, Guess 7: makeGuess result Map
+1190 | Passed    | Run time: 0 ms           | Round 1, Guess 7: Word count
+1191 | Passed    | Run time: 0 ms           | Round 1, Guess 7: Current pattern
+1192 | Passed    | Run time: 0 ms           | Round 1, Guess 8: makeGuess result Map
+1193 | Passed    | Run time: 0 ms           | Round 1, Guess 8: Word count
+1194 | Passed    | Run time: 0 ms           | Round 1, Guess 8: Current pattern
+1195 | Passed    | Run time: 0 ms           | Round 1, Guess 9: makeGuess result Map
+1196 | Passed    | Run time: 0 ms           | Round 1, Guess 9: Word count
+1197 | Passed    | Run time: 0 ms           | Round 1, Guess 9: Current pattern
+1198 | Passed    | Run time: 0 ms           | Round 1, Guess 10: makeGuess result Map
+1199 | Passed    | Run time: 0 ms           | Round 1, Guess 10: Word count
+1200 | Passed    | Run time: 0 ms           | Round 1, Guess 10: Current pattern
+1201 | Passed    | Run time: 0 ms           | Round 1, Guess 11: makeGuess result Map
+1202 | Passed    | Run time: 0 ms           | Round 1, Guess 11: Word count
+1203 | Passed    | Run time: 0 ms           | Round 1, Guess 11: Current pattern
+1204 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 2
+1205 | Passed    | Run time: 1 ms           | Round 2: Prep for round & Initial number of words
+1206 | Passed    | Run time: 0 ms           | Round 2: Initial pattern
+1207 | Passed    | Run time: 4 ms           | Round 2, Guess 0: makeGuess result Map
+1208 | Passed    | Run time: 0 ms           | Round 2, Guess 0: Word count
+1209 | Passed    | Run time: 0 ms           | Round 2, Guess 0: Current pattern
+1210 | Passed    | Run time: 4 ms           | Round 2, Guess 1: makeGuess result Map
+1211 | Passed    | Run time: 0 ms           | Round 2, Guess 1: Word count
+1212 | Passed    | Run time: 1 ms           | Round 2, Guess 1: Current pattern
+1213 | Passed    | Run time: 4 ms           | Round 2, Guess 2: makeGuess result Map
+1214 | Passed    | Run time: 0 ms           | Round 2, Guess 2: Word count
+1215 | Passed    | Run time: 0 ms           | Round 2, Guess 2: Current pattern
+1216 | Passed    | Run time: 3 ms           | Round 2, Guess 3: makeGuess result Map
+1217 | Passed    | Run time: 0 ms           | Round 2, Guess 3: Word count
+1218 | Passed    | Run time: 1 ms           | Round 2, Guess 3: Current pattern
+1219 | Passed    | Run time: 2 ms           | Round 2, Guess 4: makeGuess result Map
+1220 | Passed    | Run time: 0 ms           | Round 2, Guess 4: Word count
+1221 | Passed    | Run time: 0 ms           | Round 2, Guess 4: Current pattern
+1222 | Passed    | Run time: 2 ms           | Round 2, Guess 5: makeGuess result Map
+1223 | Passed    | Run time: 0 ms           | Round 2, Guess 5: Word count
+1224 | Passed    | Run time: 0 ms           | Round 2, Guess 5: Current pattern
+1225 | Passed    | Run time: 2 ms           | Round 2, Guess 6: makeGuess result Map
+1226 | Passed    | Run time: 0 ms           | Round 2, Guess 6: Word count
+1227 | Passed    | Run time: 0 ms           | Round 2, Guess 6: Current pattern
+1228 | Passed    | Run time: 3 ms           | Round 2, Guess 7: makeGuess result Map
+1229 | Passed    | Run time: 0 ms           | Round 2, Guess 7: Word count
+1230 | Passed    | Run time: 0 ms           | Round 2, Guess 7: Current pattern
+1231 | Passed    | Run time: 2 ms           | Round 2, Guess 8: makeGuess result Map
+1232 | Passed    | Run time: 0 ms           | Round 2, Guess 8: Word count
+1233 | Passed    | Run time: 0 ms           | Round 2, Guess 8: Current pattern
+1234 | Passed    | Run time: 2 ms           | Round 2, Guess 9: makeGuess result Map
+1235 | Passed    | Run time: 0 ms           | Round 2, Guess 9: Word count
+1236 | Passed    | Run time: 0 ms           | Round 2, Guess 9: Current pattern
+1237 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 3
+1238 | Passed    | Run time: 1 ms           | Round 3: Prep for round & Initial number of words
+1239 | Passed    | Run time: 0 ms           | Round 3: Initial pattern
+1240 | Passed    | Run time: 1 ms           | Round 3, Guess 0: makeGuess result Map
+1241 | Passed    | Run time: 0 ms           | Round 3, Guess 0: Word count
+1242 | Passed    | Run time: 0 ms           | Round 3, Guess 0: Current pattern
+1243 | Passed    | Run time: 0 ms           | Round 3, Guess 1: makeGuess result Map
+1244 | Passed    | Run time: 0 ms           | Round 3, Guess 1: Word count
+1245 | Passed    | Run time: 0 ms           | Round 3, Guess 1: Current pattern
+1246 | Passed    | Run time: 0 ms           | Round 3, Guess 2: makeGuess result Map
+1247 | Passed    | Run time: 0 ms           | Round 3, Guess 2: Word count
+1248 | Passed    | Run time: 0 ms           | Round 3, Guess 2: Current pattern
+1249 | Passed    | Run time: 0 ms           | Round 3, Guess 3: makeGuess result Map
+1250 | Passed    | Run time: 0 ms           | Round 3, Guess 3: Word count
+1251 | Passed    | Run time: 0 ms           | Round 3, Guess 3: Current pattern
+1252 | Passed    | Run time: 0 ms           | Round 3, Guess 4: makeGuess result Map
+1253 | Passed    | Run time: 0 ms           | Round 3, Guess 4: Word count
+1254 | Passed    | Run time: 0 ms           | Round 3, Guess 4: Current pattern
+1255 | Passed    | Run time: 0 ms           | Round 3, Guess 5: makeGuess result Map
+1256 | Passed    | Run time: 0 ms           | Round 3, Guess 5: Word count
+1257 | Passed    | Run time: 0 ms           | Round 3, Guess 5: Current pattern
+1258 | Passed    | Run time: 0 ms           | Round 3, Guess 6: makeGuess result Map
+1259 | Passed    | Run time: 0 ms           | Round 3, Guess 6: Word count
+1260 | Passed    | Run time: 0 ms           | Round 3, Guess 6: Current pattern
+1261 | Passed    | Run time: 0 ms           | Round 3, Guess 7: makeGuess result Map
+1262 | Passed    | Run time: 0 ms           | Round 3, Guess 7: Word count
+1263 | Passed    | Run time: 0 ms           | Round 3, Guess 7: Current pattern
+1264 | Passed    | Run time: 0 ms           | Round 3, Guess 8: makeGuess result Map
+1265 | Passed    | Run time: 0 ms           | Round 3, Guess 8: Word count
+1266 | Passed    | Run time: 0 ms           | Round 3, Guess 8: Current pattern
+1267 | Passed    | Run time: 0 ms           | Round 3, Guess 9: makeGuess result Map
+1268 | Passed    | Run time: 0 ms           | Round 3, Guess 9: Word count
+1269 | Passed    | Run time: 0 ms           | Round 3, Guess 9: Current pattern
+1270 | Passed    | Run time: 0 ms           | Round 3, Guess 10: makeGuess result Map
+1271 | Passed    | Run time: 0 ms           | Round 3, Guess 10: Word count
+1272 | Passed    | Run time: 0 ms           | Round 3, Guess 10: Current pattern
+1273 | Passed    | Run time: 0 ms           | Round 3, Guess 11: makeGuess result Map
+1274 | Passed    | Run time: 0 ms           | Round 3, Guess 11: Word count
+1275 | Passed    | Run time: 0 ms           | Round 3, Guess 11: Current pattern
+1276 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 4
+1277 | Passed    | Run time: 1 ms           | Round 4: Prep for round & Initial number of words
+1278 | Passed    | Run time: 0 ms           | Round 4: Initial pattern
+1279 | Passed    | Run time: 2 ms           | Round 4, Guess 0: makeGuess result Map
+1280 | Passed    | Run time: 0 ms           | Round 4, Guess 0: Word count
+1281 | Passed    | Run time: 0 ms           | Round 4, Guess 0: Current pattern
+1282 | Passed    | Run time: 1 ms           | Round 4, Guess 1: makeGuess result Map
+1283 | Passed    | Run time: 0 ms           | Round 4, Guess 1: Word count
+1284 | Passed    | Run time: 0 ms           | Round 4, Guess 1: Current pattern
+1285 | Passed    | Run time: 1 ms           | Round 4, Guess 2: makeGuess result Map
+1286 | Passed    | Run time: 0 ms           | Round 4, Guess 2: Word count
+1287 | Passed    | Run time: 0 ms           | Round 4, Guess 2: Current pattern
+1288 | Passed    | Run time: 1 ms           | Round 4, Guess 3: makeGuess result Map
+1289 | Passed    | Run time: 0 ms           | Round 4, Guess 3: Word count
+1290 | Passed    | Run time: 1 ms           | Round 4, Guess 3: Current pattern
+1291 | Passed    | Run time: 0 ms           | Round 4, Guess 4: makeGuess result Map
+1292 | Passed    | Run time: 0 ms           | Round 4, Guess 4: Word count
+1293 | Passed    | Run time: 0 ms           | Round 4, Guess 4: Current pattern
+1294 | Passed    | Run time: 0 ms           | Round 4, Guess 5: makeGuess result Map
+1295 | Passed    | Run time: 0 ms           | Round 4, Guess 5: Word count
+1296 | Passed    | Run time: 0 ms           | Round 4, Guess 5: Current pattern
+1297 | Passed    | Run time: 0 ms           | Round 4, Guess 6: makeGuess result Map
+1298 | Passed    | Run time: 0 ms           | Round 4, Guess 6: Word count
+1299 | Passed    | Run time: 0 ms           | Round 4, Guess 6: Current pattern
+1300 | Passed    | Run time: 0 ms           | Round 4, Guess 7: makeGuess result Map
+1301 | Passed    | Run time: 0 ms           | Round 4, Guess 7: Word count
+1302 | Passed    | Run time: 0 ms           | Round 4, Guess 7: Current pattern
+1303 | Passed    | Run time: 0 ms           | Round 4, Guess 8: makeGuess result Map
+1304 | Passed    | Run time: 0 ms           | Round 4, Guess 8: Word count
+1305 | Passed    | Run time: 0 ms           | Round 4, Guess 8: Current pattern
+1306 | Passed    | Run time: 0 ms           | Round 4, Guess 9: makeGuess result Map
+1307 | Passed    | Run time: 0 ms           | Round 4, Guess 9: Word count
+1308 | Passed    | Run time: 0 ms           | Round 4, Guess 9: Current pattern
+1309 | Passed    | Run time: 0 ms           | Round 4, Guess 10: makeGuess result Map
+1310 | Passed    | Run time: 0 ms           | Round 4, Guess 10: Word count
+1311 | Passed    | Run time: 0 ms           | Round 4, Guess 10: Current pattern
+1312 | Passed    | Run time: 0 ms           | Round 4, Guess 11: makeGuess result Map
+1313 | Passed    | Run time: 0 ms           | Round 4, Guess 11: Word count
+1314 | Passed    | Run time: 0 ms           | Round 4, Guess 11: Current pattern
+1315 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 5
+1316 | Passed    | Run time: 2 ms           | Round 5: Prep for round & Initial number of words
+1317 | Passed    | Run time: 0 ms           | Round 5: Initial pattern
+1318 | Passed    | Run time: 3 ms           | Round 5, Guess 0: makeGuess result Map
+1319 | Passed    | Run time: 0 ms           | Round 5, Guess 0: Word count
+1320 | Passed    | Run time: 0 ms           | Round 5, Guess 0: Current pattern
+1321 | Passed    | Run time: 0 ms           | Round 5, Guess 1: makeGuess result Map
+1322 | Passed    | Run time: 0 ms           | Round 5, Guess 1: Word count
+1323 | Passed    | Run time: 0 ms           | Round 5, Guess 1: Current pattern
+1324 | Passed    | Run time: 0 ms           | Round 5, Guess 2: makeGuess result Map
+1325 | Passed    | Run time: 0 ms           | Round 5, Guess 2: Word count
+1326 | Passed    | Run time: 0 ms           | Round 5, Guess 2: Current pattern
+1327 | Passed    | Run time: 0 ms           | Round 5, Guess 3: makeGuess result Map
+1328 | Passed    | Run time: 0 ms           | Round 5, Guess 3: Word count
+1329 | Passed    | Run time: 0 ms           | Round 5, Guess 3: Current pattern
+1330 | Passed    | Run time: 0 ms           | Round 5, Guess 4: makeGuess result Map
+1331 | Passed    | Run time: 0 ms           | Round 5, Guess 4: Word count
+1332 | Passed    | Run time: 0 ms           | Round 5, Guess 4: Current pattern
+1333 | Passed    | Run time: 1 ms           | Round 5, Guess 5: makeGuess result Map
+1334 | Passed    | Run time: 0 ms           | Round 5, Guess 5: Word count
+1335 | Passed    | Run time: 0 ms           | Round 5, Guess 5: Current pattern
+1336 | Passed    | Run time: 0 ms           | Round 5, Guess 6: makeGuess result Map
+1337 | Passed    | Run time: 0 ms           | Round 5, Guess 6: Word count
+1338 | Passed    | Run time: 0 ms           | Round 5, Guess 6: Current pattern
+1339 | Passed    | Run time: 0 ms           | Round 5, Guess 7: makeGuess result Map
+1340 | Passed    | Run time: 0 ms           | Round 5, Guess 7: Word count
+1341 | Passed    | Run time: 0 ms           | Round 5, Guess 7: Current pattern
+1342 | Passed    | Run time: 0 ms           | Round 5, Guess 8: makeGuess result Map
+1343 | Passed    | Run time: 0 ms           | Round 5, Guess 8: Word count
+1344 | Passed    | Run time: 0 ms           | Round 5, Guess 8: Current pattern
+1345 | Passed    | Run time: 0 ms           | Round 5, Guess 9: makeGuess result Map
+1346 | Failed    | NullPointerException     | Round 5, Guess 9: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1347 | Failed    | Incorrect return value   | Round 5, Guess 9: Current pattern
+1348 | Failed    | NullPointerException     | Round 5, Guess 10: makeGuess result Map
+      java.lang.NullPointerException
+1349 | Failed    | NullPointerException     | Round 5, Guess 10: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1350 | Failed    | Incorrect return value   | Round 5, Guess 10: Current pattern
+1351 | Failed    | NullPointerException     | Round 5, Guess 11: makeGuess result Map
+      java.lang.NullPointerException
+1352 | Failed    | NullPointerException     | Round 5, Guess 11: Word count
+      java.lang.NullPointerException
+	at HangmanManager.numWordsCurrent(HangmanManager.java:124)
+	at BevoTest_Hangman$5.executeTest(BevoTest_Hangman.java:241)
+	... 2 more
+1353 | Failed    | Incorrect return value   | Round 5, Guess 11: Current pattern
+1354 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 6
+1355 | Passed    | Run time: 2 ms           | Round 6: Prep for round & Initial number of words
+1356 | Passed    | Run time: 0 ms           | Round 6: Initial pattern
+1357 | Passed    | Run time: 6 ms           | Round 6, Guess 0: makeGuess result Map
+1358 | Passed    | Run time: 0 ms           | Round 6, Guess 0: Word count
+1359 | Passed    | Run time: 0 ms           | Round 6, Guess 0: Current pattern
+1360 | Passed    | Run time: 4 ms           | Round 6, Guess 1: makeGuess result Map
+1361 | Passed    | Run time: 0 ms           | Round 6, Guess 1: Word count
+1362 | Passed    | Run time: 0 ms           | Round 6, Guess 1: Current pattern
+1363 | Passed    | Run time: 3 ms           | Round 6, Guess 2: makeGuess result Map
+1364 | Passed    | Run time: 0 ms           | Round 6, Guess 2: Word count
+1365 | Passed    | Run time: 0 ms           | Round 6, Guess 2: Current pattern
+1366 | Passed    | Run time: 3 ms           | Round 6, Guess 3: makeGuess result Map
+1367 | Passed    | Run time: 0 ms           | Round 6, Guess 3: Word count
+1368 | Passed    | Run time: 0 ms           | Round 6, Guess 3: Current pattern
+1369 | Passed    | Run time: 2 ms           | Round 6, Guess 4: makeGuess result Map
+1370 | Passed    | Run time: 0 ms           | Round 6, Guess 4: Word count
+1371 | Passed    | Run time: 0 ms           | Round 6, Guess 4: Current pattern
+1372 | Passed    | Run time: 0 ms           | Round 6, Guess 5: makeGuess result Map
+1373 | Passed    | Run time: 0 ms           | Round 6, Guess 5: Word count
+1374 | Passed    | Run time: 0 ms           | Round 6, Guess 5: Current pattern
+1375 | Passed    | Run time: 0 ms           | Round 6, Guess 6: makeGuess result Map
+1376 | Passed    | Run time: 0 ms           | Round 6, Guess 6: Word count
+1377 | Passed    | Run time: 0 ms           | Round 6, Guess 6: Current pattern
+1378 | Passed    | Run time: 0 ms           | Round 6, Guess 7: makeGuess result Map
+1379 | Passed    | Run time: 0 ms           | Round 6, Guess 7: Word count
+1380 | Passed    | Run time: 0 ms           | Round 6, Guess 7: Current pattern
+1381 | Passed    | Run time: 0 ms           | Round 6, Guess 8: makeGuess result Map
+1382 | Passed    | Run time: 0 ms           | Round 6, Guess 8: Word count
+1383 | Passed    | Run time: 0 ms           | Round 6, Guess 8: Current pattern
+1384 | Passed    | Run time: 0 ms           | Round 6, Guess 9: makeGuess result Map
+1385 | Passed    | Run time: 0 ms           | Round 6, Guess 9: Word count
+1386 | Passed    | Run time: 0 ms           | Round 6, Guess 9: Current pattern
+1387 | Passed    | Run time: 0 ms           | Round 6, Guess 10: makeGuess result Map
+1388 | Passed    | Run time: 0 ms           | Round 6, Guess 10: Word count
+1389 | Passed    | Run time: 0 ms           | Round 6, Guess 10: Current pattern
+1390 | Passed    | Run time: 0 ms           | Round 6, Guess 11: makeGuess result Map
+1391 | Passed    | Run time: 0 ms           | Round 6, Guess 11: Word count
+1392 | Passed    | Run time: 0 ms           | Round 6, Guess 11: Current pattern
+1393 | Passed    | Run time: 0 ms           | Round 6, Guess 12: makeGuess result Map
+1394 | Passed    | Run time: 0 ms           | Round 6, Guess 12: Word count
+1395 | Passed    | Run time: 0 ms           | Round 6, Guess 12: Current pattern
+1396 | Passed    | Run time: 0 ms           | Round 6, Guess 13: makeGuess result Map
+1397 | Passed    | Run time: 0 ms           | Round 6, Guess 13: Word count
+1398 | Passed    | Run time: 0 ms           | Round 6, Guess 13: Current pattern
+1399 | Passed    | Run time: 0 ms           | Round 6, Guess 14: makeGuess result Map
+1400 | Passed    | Run time: 0 ms           | Round 6, Guess 14: Word count
+1401 | Passed    | Run time: 0 ms           | Round 6, Guess 14: Current pattern
+1402 | Passed    | Run time: 0 ms           | Round 6, Guess 15: makeGuess result Map
+1403 | Passed    | Run time: 0 ms           | Round 6, Guess 15: Word count
+1404 | Passed    | Run time: 0 ms           | Round 6, Guess 15: Current pattern
+1405 | Passed    | Run time: 0 ms           | Round 6, Guess 16: makeGuess result Map
+1406 | Passed    | Run time: 0 ms           | Round 6, Guess 16: Word count
+1407 | Passed    | Run time: 0 ms           | Round 6, Guess 16: Current pattern
+1408 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 7
+1409 | Passed    | Run time: 2 ms           | Round 7: Prep for round & Initial number of words
+1410 | Passed    | Run time: 0 ms           | Round 7: Initial pattern
+1411 | Passed    | Run time: 5 ms           | Round 7, Guess 0: makeGuess result Map
+1412 | Passed    | Run time: 0 ms           | Round 7, Guess 0: Word count
+1413 | Passed    | Run time: 0 ms           | Round 7, Guess 0: Current pattern
+1414 | Passed    | Run time: 4 ms           | Round 7, Guess 1: makeGuess result Map
+1415 | Passed    | Run time: 0 ms           | Round 7, Guess 1: Word count
+1416 | Passed    | Run time: 0 ms           | Round 7, Guess 1: Current pattern
+1417 | Passed    | Run time: 3 ms           | Round 7, Guess 2: makeGuess result Map
+1418 | Passed    | Run time: 0 ms           | Round 7, Guess 2: Word count
+1419 | Passed    | Run time: 0 ms           | Round 7, Guess 2: Current pattern
+1420 | Passed    | Run time: 2 ms           | Round 7, Guess 3: makeGuess result Map
+1421 | Passed    | Run time: 0 ms           | Round 7, Guess 3: Word count
+1422 | Passed    | Run time: 0 ms           | Round 7, Guess 3: Current pattern
+1423 | Passed    | Run time: 1 ms           | Round 7, Guess 4: makeGuess result Map
+1424 | Passed    | Run time: 0 ms           | Round 7, Guess 4: Word count
+1425 | Passed    | Run time: 0 ms           | Round 7, Guess 4: Current pattern
+1426 | Passed    | Run time: 0 ms           | Round 7, Guess 5: makeGuess result Map
+1427 | Passed    | Run time: 0 ms           | Round 7, Guess 5: Word count
+1428 | Passed    | Run time: 0 ms           | Round 7, Guess 5: Current pattern
+1429 | Passed    | Run time: 0 ms           | Round 7, Guess 6: makeGuess result Map
+1430 | Passed    | Run time: 0 ms           | Round 7, Guess 6: Word count
+1431 | Passed    | Run time: 0 ms           | Round 7, Guess 6: Current pattern
+1432 | Passed    | Run time: 0 ms           | Round 7, Guess 7: makeGuess result Map
+1433 | Passed    | Run time: 0 ms           | Round 7, Guess 7: Word count
+1434 | Passed    | Run time: 0 ms           | Round 7, Guess 7: Current pattern
+1435 | Passed    | Run time: 0 ms           | Round 7, Guess 8: makeGuess result Map
+1436 | Passed    | Run time: 0 ms           | Round 7, Guess 8: Word count
+1437 | Passed    | Run time: 0 ms           | Round 7, Guess 8: Current pattern
+1438 | Passed    | Run time: 0 ms           | Round 7, Guess 9: makeGuess result Map
+1439 | Passed    | Run time: 0 ms           | Round 7, Guess 9: Word count
+1440 | Passed    | Run time: 0 ms           | Round 7, Guess 9: Current pattern
+1441 | Passed    | Run time: 0 ms           | Round 7, Guess 10: makeGuess result Map
+1442 | Passed    | Run time: 0 ms           | Round 7, Guess 10: Word count
+1443 | Passed    | Run time: 0 ms           | Round 7, Guess 10: Current pattern
+1444 | Passed    | Run time: 0 ms           | Round 7, Guess 11: makeGuess result Map
+1445 | Passed    | Run time: 0 ms           | Round 7, Guess 11: Word count
+1446 | Passed    | Run time: 0 ms           | Round 7, Guess 11: Current pattern
+1447 | Passed    | Run time: 0 ms           | Round 7, Guess 12: makeGuess result Map
+1448 | Passed    | Run time: 0 ms           | Round 7, Guess 12: Word count
+1449 | Passed    | Run time: 0 ms           | Round 7, Guess 12: Current pattern
+1450 | Passed    | Run time: 0 ms           | Round 7, Guess 13: makeGuess result Map
+1451 | Passed    | Run time: 0 ms           | Round 7, Guess 13: Word count
+1452 | Passed    | Run time: 0 ms           | Round 7, Guess 13: Current pattern
+1453 | Passed    | Run time: 0 ms           | Round 7, Guess 14: makeGuess result Map
+1454 | Passed    | Run time: 0 ms           | Round 7, Guess 14: Word count
+1455 | Passed    | Run time: 0 ms           | Round 7, Guess 14: Current pattern
+1456 | Passed    | Run time: 0 ms           | Round 7, Guess 15: makeGuess result Map
+1457 | Passed    | Run time: 0 ms           | Round 7, Guess 15: Word count
+1458 | Passed    | Run time: 0 ms           | Round 7, Guess 15: Current pattern
+1459 | Passed    | Run time: 0 ms           | Round 7, Guess 16: makeGuess result Map
+1460 | Passed    | Run time: 0 ms           | Round 7, Guess 16: Word count
+1461 | Passed    | Run time: 0 ms           | Round 7, Guess 16: Current pattern
+1462 | Passed    | Run time: 0 ms           | Round 7, Guess 17: makeGuess result Map
+1463 | Passed    | Run time: 0 ms           | Round 7, Guess 17: Word count
+1464 | Passed    | Run time: 0 ms           | Round 7, Guess 17: Current pattern
+1465 | Passed    | Run time: 0 ms           | Round 7, Guess 18: makeGuess result Map
+1466 | Passed    | Run time: 0 ms           | Round 7, Guess 18: Word count
+1467 | Passed    | Run time: 0 ms           | Round 7, Guess 18: Current pattern
+1468 | Passed    | Run time: 0 ms           | Round 7, Guess 19: makeGuess result Map
+1469 | Passed    | Run time: 0 ms           | Round 7, Guess 19: Word count
+1470 | Passed    | Run time: 0 ms           | Round 7, Guess 19: Current pattern
+1471 | Passed    | Run time: 0 ms           | Round 7, Guess 20: makeGuess result Map
+1472 | Passed    | Run time: 0 ms           | Round 7, Guess 20: Word count
+1473 | Passed    | Run time: 0 ms           | Round 7, Guess 20: Current pattern
+1474 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 8
+1475 | Passed    | Run time: 1 ms           | Round 8: Prep for round & Initial number of words
+1476 | Passed    | Run time: 1 ms           | Round 8: Initial pattern
+1477 | Passed    | Run time: 1 ms           | Round 8, Guess 0: makeGuess result Map
+1478 | Passed    | Run time: 0 ms           | Round 8, Guess 0: Word count
+1479 | Passed    | Run time: 0 ms           | Round 8, Guess 0: Current pattern
+1480 | Passed    | Run time: 1 ms           | Round 8, Guess 1: makeGuess result Map
+1481 | Passed    | Run time: 0 ms           | Round 8, Guess 1: Word count
+1482 | Passed    | Run time: 0 ms           | Round 8, Guess 1: Current pattern
+1483 | Passed    | Run time: 2 ms           | Round 8, Guess 2: makeGuess result Map
+1484 | Passed    | Run time: 0 ms           | Round 8, Guess 2: Word count
+1485 | Passed    | Run time: 0 ms           | Round 8, Guess 2: Current pattern
+1486 | Passed    | Run time: 1 ms           | Round 8, Guess 3: makeGuess result Map
+1487 | Passed    | Run time: 0 ms           | Round 8, Guess 3: Word count
+1488 | Passed    | Run time: 0 ms           | Round 8, Guess 3: Current pattern
+1489 | Passed    | Run time: 1 ms           | Round 8, Guess 4: makeGuess result Map
+1490 | Passed    | Run time: 0 ms           | Round 8, Guess 4: Word count
+1491 | Passed    | Run time: 0 ms           | Round 8, Guess 4: Current pattern
+1492 | Passed    | Run time: 1 ms           | Round 8, Guess 5: makeGuess result Map
+1493 | Passed    | Run time: 0 ms           | Round 8, Guess 5: Word count
+1494 | Passed    | Run time: 0 ms           | Round 8, Guess 5: Current pattern
+1495 | Passed    | Run time: 1 ms           | Round 8, Guess 6: makeGuess result Map
+1496 | Passed    | Run time: 0 ms           | Round 8, Guess 6: Word count
+1497 | Passed    | Run time: 0 ms           | Round 8, Guess 6: Current pattern
+1498 | Passed    | Run time: 2 ms           | Round 8, Guess 7: makeGuess result Map
+1499 | Passed    | Run time: 0 ms           | Round 8, Guess 7: Word count
+1500 | Passed    | Run time: 1 ms           | Round 8, Guess 7: Current pattern
+1501 | Passed    | Run time: 0 ms           | Round 8, Guess 8: makeGuess result Map
+1502 | Passed    | Run time: 0 ms           | Round 8, Guess 8: Word count
+1503 | Passed    | Run time: 0 ms           | Round 8, Guess 8: Current pattern
+1504 | Passed    | Run time: 1 ms           | Round 8, Guess 9: makeGuess result Map
+1505 | Passed    | Run time: 0 ms           | Round 8, Guess 9: Word count
+1506 | Passed    | Run time: 0 ms           | Round 8, Guess 9: Current pattern
+1507 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 9
+1508 | Passed    | Run time: 1 ms           | Round 9: Prep for round & Initial number of words
+1509 | Passed    | Run time: 0 ms           | Round 9: Initial pattern
+1510 | Passed    | Run time: 2 ms           | Round 9, Guess 0: makeGuess result Map
+1511 | Passed    | Run time: 0 ms           | Round 9, Guess 0: Word count
+1512 | Passed    | Run time: 0 ms           | Round 9, Guess 0: Current pattern
+1513 | Passed    | Run time: 2 ms           | Round 9, Guess 1: makeGuess result Map
+1514 | Passed    | Run time: 0 ms           | Round 9, Guess 1: Word count
+1515 | Passed    | Run time: 0 ms           | Round 9, Guess 1: Current pattern
+1516 | Passed    | Run time: 2 ms           | Round 9, Guess 2: makeGuess result Map
+1517 | Passed    | Run time: 0 ms           | Round 9, Guess 2: Word count
+1518 | Passed    | Run time: 0 ms           | Round 9, Guess 2: Current pattern
+1519 | Passed    | Run time: 1 ms           | Round 9, Guess 3: makeGuess result Map
+1520 | Passed    | Run time: 0 ms           | Round 9, Guess 3: Word count
+1521 | Passed    | Run time: 0 ms           | Round 9, Guess 3: Current pattern
+1522 | Passed    | Run time: 1 ms           | Round 9, Guess 4: makeGuess result Map
+1523 | Passed    | Run time: 0 ms           | Round 9, Guess 4: Word count
+1524 | Passed    | Run time: 0 ms           | Round 9, Guess 4: Current pattern
+1525 | Passed    | Run time: 1 ms           | Round 9, Guess 5: makeGuess result Map
+1526 | Passed    | Run time: 0 ms           | Round 9, Guess 5: Word count
+1527 | Passed    | Run time: 0 ms           | Round 9, Guess 5: Current pattern
+1528 | Passed    | Run time: 2 ms           | Round 9, Guess 6: makeGuess result Map
+1529 | Passed    | Run time: 0 ms           | Round 9, Guess 6: Word count
+1530 | Passed    | Run time: 0 ms           | Round 9, Guess 6: Current pattern
+1531 | Passed    | Run time: 1 ms           | Round 9, Guess 7: makeGuess result Map
+1532 | Passed    | Run time: 0 ms           | Round 9, Guess 7: Word count
+1533 | Passed    | Run time: 0 ms           | Round 9, Guess 7: Current pattern
+1534 | Passed    | Run time: 1 ms           | Round 9, Guess 8: makeGuess result Map
+1535 | Passed    | Run time: 0 ms           | Round 9, Guess 8: Word count
+1536 | Passed    | Run time: 0 ms           | Round 9, Guess 8: Current pattern
+1537 | Passed    | Run time: 0 ms           | Round 9, Guess 9: makeGuess result Map
+1538 | Passed    | Run time: 0 ms           | Round 9, Guess 9: Word count
+1539 | Passed    | Run time: 0 ms           | Round 9, Guess 9: Current pattern
+1540 | Passed    | Run time: 0 ms           | Construct HangmanManager - Round 10
+1541 | Passed    | Run time: 1 ms           | Round 10: Prep for round & Initial number of words
+1542 | Passed    | Run time: 0 ms           | Round 10: Initial pattern
+1543 | Passed    | Run time: 1 ms           | Round 10, Guess 0: makeGuess result Map
+1544 | Passed    | Run time: 0 ms           | Round 10, Guess 0: Word count
+1545 | Passed    | Run time: 0 ms           | Round 10, Guess 0: Current pattern
+1546 | Passed    | Run time: 1 ms           | Round 10, Guess 1: makeGuess result Map
+1547 | Passed    | Run time: 0 ms           | Round 10, Guess 1: Word count
+1548 | Passed    | Run time: 0 ms           | Round 10, Guess 1: Current pattern
+1549 | Passed    | Run time: 2 ms           | Round 10, Guess 2: makeGuess result Map
+1550 | Passed    | Run time: 0 ms           | Round 10, Guess 2: Word count
+1551 | Passed    | Run time: 0 ms           | Round 10, Guess 2: Current pattern
+1552 | Passed    | Run time: 1 ms           | Round 10, Guess 3: makeGuess result Map
+1553 | Passed    | Run time: 0 ms           | Round 10, Guess 3: Word count
+1554 | Passed    | Run time: 0 ms           | Round 10, Guess 3: Current pattern
+1555 | Passed    | Run time: 1 ms           | Round 10, Guess 4: makeGuess result Map
+1556 | Passed    | Run time: 0 ms           | Round 10, Guess 4: Word count
+1557 | Passed    | Run time: 0 ms           | Round 10, Guess 4: Current pattern
+1558 | Passed    | Run time: 0 ms           | Round 10, Guess 5: makeGuess result Map
+1559 | Passed    | Run time: 0 ms           | Round 10, Guess 5: Word count
+1560 | Passed    | Run time: 0 ms           | Round 10, Guess 5: Current pattern
+1561 | Passed    | Run time: 1 ms           | Round 10, Guess 6: makeGuess result Map
+1562 | Passed    | Run time: 0 ms           | Round 10, Guess 6: Word count
+1563 | Passed    | Run time: 0 ms           | Round 10, Guess 6: Current pattern
+1564 | Passed    | Run time: 0 ms           | Round 10, Guess 7: makeGuess result Map
+1565 | Passed    | Run time: 0 ms           | Round 10, Guess 7: Word count
+1566 | Passed    | Run time: 0 ms           | Round 10, Guess 7: Current pattern
+1567 | Passed    | Run time: 0 ms           | Round 10, Guess 8: makeGuess result Map
+1568 | Passed    | Run time: 0 ms           | Round 10, Guess 8: Word count
+1569 | Passed    | Run time: 0 ms           | Round 10, Guess 8: Current pattern
+1570 | Passed    | Run time: 0 ms           | Round 10, Guess 9: makeGuess result Map
+1571 | Passed    | Run time: 0 ms           | Round 10, Guess 9: Word count
+1572 | Passed    | Run time: 0 ms           | Round 10, Guess 9: Current pattern
+1573 | Passed    | Run time: 0 ms           | Round 10, Guess 10: makeGuess result Map
+1574 | Passed    | Run time: 0 ms           | Round 10, Guess 10: Word count
+1575 | Passed    | Run time: 0 ms           | Round 10, Guess 10: Current pattern
+1576 | Passed    | Run time: 0 ms           | Round 10, Guess 11: makeGuess result Map
+1577 | Passed    | Run time: 0 ms           | Round 10, Guess 11: Word count
+1578 | Passed    | Run time: 0 ms           | Round 10, Guess 11: Current pattern
+1579 | Passed    | Run time: 0 ms           | Round 10, Guess 12: makeGuess result Map
+1580 | Passed    | Run time: 0 ms           | Round 10, Guess 12: Word count
+1581 | Passed    | Run time: 0 ms           | Round 10, Guess 12: Current pattern
+1582 | Passed    | Run time: 0 ms           | Round 10, Guess 13: makeGuess result Map
+1583 | Passed    | Run time: 0 ms           | Round 10, Guess 13: Word count
+1584 | Passed    | Run time: 0 ms           | Round 10, Guess 13: Current pattern
+1585 | Passed    | Run time: 0 ms           | Round 10, Guess 14: makeGuess result Map
+1586 | Passed    | Run time: 0 ms           | Round 10, Guess 14: Word count
+1587 | Passed    | Run time: 0 ms           | Round 10, Guess 14: Current pattern
+1588 | Passed    | Run time: 0 ms           | Round 10, Guess 15: makeGuess result Map
+1589 | Passed    | Run time: 0 ms           | Round 10, Guess 15: Word count
+1590 | Passed    | Run time: 0 ms           | Round 10, Guess 15: Current pattern
+1591 | Passed    | Run time: 0 ms           | Round 10, Guess 16: makeGuess result Map
+1592 | Passed    | Run time: 0 ms           | Round 10, Guess 16: Word count
+1593 | Passed    | Run time: 0 ms           | Round 10, Guess 16: Current pattern
+1594 | Passed    | Run time: 0 ms           | Round 10, Guess 17: makeGuess result Map
+1595 | Passed    | Run time: 0 ms           | Round 10, Guess 17: Word count
+1596 | Passed    | Run time: 0 ms           | Round 10, Guess 17: Current pattern
+1597 | Passed    | Run time: 0 ms           | Round 10, Guess 18: makeGuess result Map
+1598 | Passed    | Run time: 0 ms           | Round 10, Guess 18: Word count
+1599 | Passed    | Run time: 0 ms           | Round 10, Guess 18: Current pattern
+1600 | Passed    | Run time: 0 ms           | Round 10, Guess 19: makeGuess result Map
+1601 | Passed    | Run time: 0 ms           | Round 10, Guess 19: Word count
+1602 | Passed    | Run time: 0 ms           | Round 10, Guess 19: Current pattern
+
+END OF TEST LOG
