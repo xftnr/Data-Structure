@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/xiape/Desktop/CS 314/314 class/bevotest.jar"/>
-	<classpathentry kind="lib" path="C:/Users/xiape/Desktop/CS 314/src/bevotest.jar"/>
-	<classpathentry kind="lib" path="C:/Users/xiape/Desktop/CS 314/bevotest.jar"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
